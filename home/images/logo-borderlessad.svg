@@ -1,32 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" fill="none" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-label="Borderless AI Limited">
   <defs>
-    <linearGradient id="wordGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ff2d92"/>
-      <stop offset="50%" stop-color="#ff8a3d"/>
-      <stop offset="100%" stop-color="#ffd166"/>
+    <!-- Globe gradient: cyan -> blue -> purple (matches source) -->
+    <linearGradient id="globeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#3ec0ff"/>
+      <stop offset="55%" stop-color="#3855e6"/>
+      <stop offset="100%" stop-color="#7a2bd6"/>
     </linearGradient>
-    <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#22e1ff"/>
-      <stop offset="100%" stop-color="#7b2cff"/>
+    <!-- Orbital ring gradient -->
+    <linearGradient id="orbitGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#7a2bd6"/>
+      <stop offset="100%" stop-color="#3ec0ff"/>
     </linearGradient>
-    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ff2d92"/>
-      <stop offset="100%" stop-color="#ff8a3d"/>
-    </linearGradient>
+    <!-- Inner highlight -->
+    <radialGradient id="globeShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Mask so meridians/continents only show inside the globe -->
+    <clipPath id="globeClip">
+      <circle cx="110" cy="100" r="92"/>
+    </clipPath>
   </defs>
 
-  <!-- Stylized globe icon -->
-  <g transform="translate(8 18)">
-    <circle cx="27" cy="27" r="25" fill="none" stroke="url(#iconGrad)" stroke-width="2.6"/>
-    <ellipse cx="27" cy="27" rx="25" ry="10" fill="none" stroke="url(#iconGrad)" stroke-width="1.6" opacity=".65"/>
-    <ellipse cx="27" cy="27" rx="10" ry="25" fill="none" stroke="url(#iconGrad)" stroke-width="1.6" opacity=".65"/>
-    <line x1="2" y1="27" x2="52" y2="27" stroke="url(#iconGrad)" stroke-width="1.4" opacity=".55"/>
-    <circle cx="27" cy="27" r="5.5" fill="url(#coreGrad)"/>
+  <!-- =========== GLOBE =========== -->
+  <g>
+    <!-- Sphere base -->
+    <circle cx="110" cy="100" r="92" fill="url(#globeGrad)"/>
+
+    <!-- Stylised continents (white silhouettes) -->
+    <g clip-path="url(#globeClip)" fill="#ffffff" fill-opacity=".92">
+      <!-- Eurasia / Africa silhouette -->
+      <path d="M70 56
+               c12 -6 24 -2 30 6
+               c4 6 -2 12 4 18
+               c5 5 14 1 18 8
+               c3 6 -4 12 0 18
+               c4 7 14 4 16 12
+               c2 10 -10 14 -6 22
+               c3 7 14 6 14 14
+               c0 9 -16 8 -22 16
+               c-6 8 6 18 -4 22
+               c-9 4 -16 -10 -24 -8
+               c-9 2 -10 14 -18 12
+               c-8 -2 -10 -14 -16 -18
+               c-8 -6 -16 -2 -20 -10
+               c-4 -8 8 -16 6 -24
+               c-2 -10 -16 -10 -14 -22
+               c2 -10 14 -10 18 -18
+               c4 -8 -2 -16 4 -22
+               c6 -6 14 -2 14 -10 z"/>
+      <!-- Small island / Australia hint -->
+      <path d="M150 138
+               c8 -2 16 4 14 12
+               c-2 8 -14 8 -18 2
+               c-4 -6 -2 -12 4 -14 z" fill-opacity=".85"/>
+    </g>
+
+    <!-- Latitude / longitude grid lines for globe feel -->
+    <g clip-path="url(#globeClip)" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="1.1">
+      <ellipse cx="110" cy="100" rx="92" ry="34"/>
+      <ellipse cx="110" cy="100" rx="92" ry="60"/>
+      <ellipse cx="110" cy="100" rx="40" ry="92"/>
+      <ellipse cx="110" cy="100" rx="68" ry="92"/>
+      <line x1="110" y1="8" x2="110" y2="192"/>
+    </g>
+
+    <!-- Soft top-left highlight -->
+    <circle cx="110" cy="100" r="92" fill="url(#globeShine)"/>
+
+    <!-- Orbital ring (rotated tilted ellipse) -->
+    <g transform="rotate(-20 110 100)">
+      <ellipse cx="110" cy="100" rx="118" ry="30"
+               fill="none" stroke="url(#orbitGrad)" stroke-width="6.5"
+               stroke-linecap="round" opacity=".95"/>
+      <!-- Tiny orbiting dots -->
+      <circle cx="-8" cy="100" r="4.5" fill="#7a2bd6"/>
+      <circle cx="228" cy="100" r="3.5" fill="#7a2bd6"/>
+    </g>
   </g>
 
-  <!-- Wordmark -->
-  <text x="76" y="52" font-family="Anton, Impact, 'Oswald', sans-serif" font-size="34" font-weight="800" fill="url(#wordGrad)" letter-spacing="0.5">BORDERLESSAD</text>
-
-  <!-- Tagline -->
-  <text x="77" y="72" font-family="Inter, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#fff" opacity=".68" letter-spacing="4">MOBILE AD TECH</text>
+  <!-- =========== WORD MARK =========== -->
+  <g fill="#f5f7ff" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" letter-spacing=".2">
+    <text x="232" y="118" font-size="56">Borderless</text>
+    <text x="232" y="178" font-size="56"><tspan fill="#5b8cff">AI</tspan> <tspan>Limited</tspan></text>
+  </g>
 </svg>

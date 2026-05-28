@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Borderless AI">
+  <defs>
+    <linearGradient id="iconGlobeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#3ec0ff"/>
+      <stop offset="55%" stop-color="#3855e6"/>
+      <stop offset="100%" stop-color="#7a2bd6"/>
+    </linearGradient>
+    <linearGradient id="iconOrbitGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#7a2bd6"/>
+      <stop offset="100%" stop-color="#3ec0ff"/>
+    </linearGradient>
+    <radialGradient id="iconShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="iconGlobeClip">
+      <circle cx="120" cy="120" r="92"/>
+    </clipPath>
+  </defs>
+
+  <!-- Globe sphere -->
+  <circle cx="120" cy="120" r="92" fill="url(#iconGlobeGrad)"/>
+
+  <!-- Continents (simplified) -->
+  <g clip-path="url(#iconGlobeClip)" fill="#ffffff" fill-opacity=".92">
+    <path d="M80 76
+             c12 -6 24 -2 30 6
+             c4 6 -2 12 4 18
+             c5 5 14 1 18 8
+             c3 6 -4 12 0 18
+             c4 7 14 4 16 12
+             c2 10 -10 14 -6 22
+             c3 7 14 6 14 14
+             c0 9 -16 8 -22 16
+             c-6 8 6 18 -4 22
+             c-9 4 -16 -10 -24 -8
+             c-9 2 -10 14 -18 12
+             c-8 -2 -10 -14 -16 -18
+             c-8 -6 -16 -2 -20 -10
+             c-4 -8 8 -16 6 -24
+             c-2 -10 -16 -10 -14 -22
+             c2 -10 14 -10 18 -18
+             c4 -8 -2 -16 4 -22
+             c6 -6 14 -2 14 -10 z"/>
+    <path d="M160 158
+             c8 -2 16 4 14 12
+             c-2 8 -14 8 -18 2
+             c-4 -6 -2 -12 4 -14 z" fill-opacity=".85"/>
+  </g>
+
+  <!-- Latitude/longitude grid -->
+  <g clip-path="url(#iconGlobeClip)" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="1.2">
+    <ellipse cx="120" cy="120" rx="92" ry="34"/>
+    <ellipse cx="120" cy="120" rx="92" ry="60"/>
+    <ellipse cx="120" cy="120" rx="40" ry="92"/>
+    <ellipse cx="120" cy="120" rx="68" ry="92"/>
+    <line x1="120" y1="28" x2="120" y2="212"/>
+  </g>
+
+  <!-- Highlight -->
+  <circle cx="120" cy="120" r="92" fill="url(#iconShine)"/>
+
+  <!-- Orbital ring -->
+  <g transform="rotate(-20 120 120)">
+    <ellipse cx="120" cy="120" rx="116" ry="30"
+             fill="none" stroke="url(#iconOrbitGrad)" stroke-width="7"
+             stroke-linecap="round" opacity=".95"/>
+    <circle cx="4"   cy="120" r="5" fill="#7a2bd6"/>
+    <circle cx="236" cy="120" r="4" fill="#7a2bd6"/>
+  </g>
+</svg>
