@@ -197,7 +197,77 @@
     }
 
     /* ---- Hero ---- */
-    .heroscreen{ padding-top: 60px !important; }
+    .heroscreen{ padding-top: 18px !important; }
+    .heroscreen.margintop{ margin-top: 24px !important; }
+    .heroscreen .herotext{ margin-top: 0 !important; padding-top: 0 !important; }
+    @media (max-width: 991px){
+      .heroscreen.margintop{ margin-top: 12px !important; }
+      .heroscreen{ padding-top: 8px !important; }
+    }
+
+    /* ---- DSP Partners section ---- */
+    .dsp-partners-flex{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .dsp-partner-card{
+      flex: 1 1 220px;
+      min-width: 200px;
+      max-width: 270px;
+      padding: 28px 24px;
+      border-radius: 22px;
+      text-align: center;
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 30px;
+      letter-spacing: .05em;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 18px 45px rgba(11,5,36,.45), inset 0 1px 0 rgba(255,255,255,.12);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .dsp-partner-card::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.25), transparent 60%);
+      pointer-events:none;
+    }
+    .dsp-partner-card:hover{
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 28px 70px rgba(255,45,146,.35), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .dsp-partner-card .dsp-name{
+      position: relative;
+      z-index: 1;
+      display: block;
+      font-weight: 800;
+      text-shadow: 0 4px 20px rgba(0,0,0,.25);
+    }
+    .dsp-partner-card .dsp-tag{
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin-top: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: .22em;
+      font-weight: 600;
+      color: rgba(255,255,255,.85);
+    }
+    .dsp-card-1{ background: linear-gradient(135deg, #ff2d92 0%, #7b2cff 100%); }
+    .dsp-card-2{ background: linear-gradient(135deg, #ff8a3d 0%, #ff2d92 100%); }
+    .dsp-card-3{ background: linear-gradient(135deg, #22e1ff 0%, #7b2cff 100%); }
+    .dsp-card-4{ background: linear-gradient(135deg, #ffd166 0%, #ff5ec4 100%); color:#1a0033; }
+    .dsp-card-4 .dsp-tag{ color: rgba(26,0,51,.75); }
     .main-paragraph{ color: rgba(255,245,230,.92) !important; }
     .main-paragraph.center.leftdesktop{
       font-size: 64px !important;
@@ -656,6 +726,29 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
       <img src="images/frame-2131329995.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
     </div>
   </section>
+  <section class="heading-section magrintop">
+    <h2 class="heading2">our DSP partners</h2>
+  </section>
+  <section class="cards-section smallmargintop">
+    <div class="dsp-partners-flex">
+      <div class="dsp-partner-card dsp-card-1">
+        <span class="dsp-name">Unity</span>
+        <span class="dsp-tag">DSP PARTNER</span>
+      </div>
+      <div class="dsp-partner-card dsp-card-2">
+        <span class="dsp-name">Liftoff</span>
+        <span class="dsp-tag">DSP PARTNER</span>
+      </div>
+      <div class="dsp-partner-card dsp-card-3">
+        <span class="dsp-name">Verve</span>
+        <span class="dsp-tag">DSP PARTNER</span>
+      </div>
+      <div class="dsp-partner-card dsp-card-4">
+        <span class="dsp-name">Mintegral</span>
+        <span class="dsp-tag">DSP PARTNER</span>
+      </div>
+    </div>
+  </section>
   <section class="halfbanner innerpadding margintop">
     <div class="imagehalf">
       <h2 data-w-id="666406b4-7753-f60b-4f2e-3ce9ce94fbb6" style="opacity:0" class="heading2 centeralign">Boost ROI and eliminate wasted spend</h2>
@@ -683,17 +776,17 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
       <div class="w-layout-vflex keycard _50flex">
         <div class="w-layout-hflex iconheading"><img src="images/frame-202131330241.svg" loading="lazy" width="28"
             alt="" class="iconcard" />
-          <h3 class="heading3">setup your goal with us</h3>
+          <h3 class="heading3">Set up your goal with us</h3>
         </div>
         <p class="main-paragraph">Together with advertisers we define <br />goals, target audience, and budget of
-          campaign.</p>
+          the campaign.</p>
       </div>
       <div class="w-layout-vflex keycard _50flex">
         <div class="w-layout-hflex iconheading"><img src="images/frame-202131330244.svg" loading="lazy" width="28"
             alt="" class="iconcard" />
           <h3 class="heading3">Campaign Setup</h3>
         </div>
-        <p class="main-paragraph">BorderlessAd create ads and set targeting based<br />on demographics, location, and
+        <p class="main-paragraph">BorderlessAd creates ads and sets targeting based<br />on demographics, location, and
           devices.</p>
       </div>
       <div class="w-layout-vflex keycard _33flex">
@@ -715,7 +808,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
             alt="" class="iconcard" />
           <h3 class="heading3">Reporting &amp; Scaling</h3>
         </div>
-        <p class="main-paragraph">BorderlessAd Real-time campaign tuning enhances CTR, CVR, and ROI, and lowers your overall spend.
+        <p class="main-paragraph">BorderlessAd's real-time campaign tuning enhances CTR, CVR, and ROI, and lowers your overall spend.
         </p>
       </div>
     </div>
@@ -734,10 +827,10 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
         <div class="w-layout-hflex tagflex">
           <div class="texttag">advanced targeting</div>
           <div class="texttag">loyal customer base</div>
-          <div class="texttag">User Activity Raise</div>
+          <div class="texttag">User Activity Boost</div>
         </div>
         <div class="w-layout-vflex textflex">
-          <h3 class="heading2 black">user acqusition</h3>
+          <h3 class="heading2 black">user acquisition</h3>
           <p class="main-paragraph black">Leverage advanced targeting and machine-learning insights to deliver users who
             not only install but stay active, helping you build a loyal customer base.</p>
         </div>
@@ -756,9 +849,9 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
       </div>
       <div class="w-layout-vflex textcard _50flex green">
         <div class="w-layout-hflex tagflex">
-          <div class="texttag white">campaigns Retargeting</div>
-          <div class="texttag white">lifetime value Boost</div>
-          <div class="texttag white">Brand top of mind</div>
+          <div class="texttag white">Campaign Retargeting</div>
+          <div class="texttag white">Lifetime Value Boost</div>
+          <div class="texttag white">Top-of-Mind Brand</div>
         </div>
         <div class="w-layout-vflex textflex">
           <h3 class="heading2">Retargeting</h3>
@@ -774,7 +867,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
         <div class="w-layout-vflex textflex">
           <h3 class="heading2">Cross-Platform Advertising (CTV)</h3>
           <p class="main-paragraph">Connected TV (CTV) advertising delivers your brand’s message directly to viewers on smart TVs, gaming consoles, and streaming devices like Roku, Amazon Fire TV, and Apple TV.</p><a href="cross-platform-advertising.html" class="learnbtn w-inline-block">
-            <div class="btntext">lEARN MORE</div>
+            <div class="btntext">LEARN MORE</div>
           </a>
         </div>
       </div>
@@ -801,7 +894,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
         <div class="texttag white">Timi</div>
         <div class="w-layout-vflex textflex">
           <h3 class="heading3">Rupiah Cepat</h3>
-          <p class="main-paragraph">orderlessAd has been a key driver of our user acquisition efforts in important markets over the past year. They are proactive and detail-oriented, consistently working side by side with us to reach our growth goals. We're eager to continue this great partnership.</p>
+          <p class="main-paragraph">BorderlessAd has been a key driver of our user acquisition efforts in important markets over the past year. They are proactive and detail-oriented, consistently working side by side with us to reach our growth goals. We're eager to continue this great partnership.</p>
         </div>
       </div>
       <!-- <div class="w-layout-vflex reviewcard _33flex">
@@ -853,7 +946,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
             <p class="heading2 black">8.2</p>
             <p class="heading2 black">billion</p>
           </div>
-          <p class="main-paragraph black">total users outreach</p>
+          <p class="main-paragraph black">total user outreach</p>
         </div>
       </div>
       <div class="w-layout-vflex numbercard _50flex pink">
@@ -890,7 +983,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
             <p class="heading2">4.5</p>
             <p class="heading2">billion</p>
           </div>
-          <p class="main-paragraph">Singular mobile devices (less common)</p>
+          <p class="main-paragraph">unique mobile devices reached</p>
         </div>
       </div>
     </div>
@@ -902,7 +995,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
         <form id="wf-form-Form-page" name="wf-form-Form" data-name="Form" redirect="/thank-you"
           data-redirect="/thank-you" method="get" data-wf-page-id="675d58559f940c0315cf956a"
           data-wf-element-id="206e0956-170f-ca75-892e-765144a90187" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e">
-          <p class="main-paragraph marginbottom">Get in touch with you</p><input class="inputfield w-input"
+          <p class="main-paragraph marginbottom">Get in touch with us</p><input class="inputfield w-input"
             maxlength="256" name="name" data-name="Name" placeholder="Name" type="text" id="name" required="" /><input
             class="inputfield w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" type="email"
             id="Email" required="" /><input class="inputfield w-input" maxlength="256" name="Company Name"
@@ -914,8 +1007,8 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
             <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox w--redirected-checked"></div><input
               type="checkbox" name="I-agree-to-the-Privacy-Policy" id="I-agree-to-the-Privacy-Policy"
               data-name="I confirm my acceptance of the Privacy Policy." required="" style="opacity:0;position:absolute;z-index:-1"
-              checked="" /><span class="checkbox-label w-form-label" for="I-agree-to-the-Privacy-Policy">I agree to the
-              <a href="privacy-policy.html" class="main-paragraph smallcheck">Data Privacy Policy</a></span>
+              checked="" /><span class="checkbox-label w-form-label" for="I-agree-to-the-Privacy-Policy">I confirm my acceptance of the
+              <a href="privacy-policy.html" class="main-paragraph smallcheck">Privacy Policy</a></span>
           </label><input type="submit" data-wait="Please wait..." class="outlinebtn w-button" value="SUBMIT" />
         </form>
         <!-- <div class="w-form-fail">
@@ -954,7 +1047,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
               <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox w--redirected-checked"></div>
               <input type="checkbox" name="I-agree-to-the-Privacy-Policy-2" id="I-agree-to-the-Privacy-Policy-2"
                 data-name="I accept the terms of the privacy policy." required="" style="opacity:0;position:absolute;z-index:-1"
-                checked="" /><span class="checkbox-label w-form-label" for="I-agree-to-the-Privacy-Policy-2">I agree to
+                checked="" /><span class="checkbox-label w-form-label" for="I-agree-to-the-Privacy-Policy-2">I confirm my acceptance of
                 the <a href="privacy-policy-2.html" class="main-paragraph smallcheck">Privacy Policy</a></span>
             </label><input type="submit" data-wait="Please wait..." class="outlinebtn w-button" value="SUBMIT" />
           </form>
