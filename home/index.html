@@ -167,25 +167,40 @@
       box-shadow: none !important;
     }
     .logoheader{
-      filter: none;
       background: transparent !important;
-      mix-blend-mode: normal;
-      height: auto !important;
-      width: 180px !important;
+      height: 64px !important;
+      width: auto !important;
+      max-width: 30vw;
+      border-radius: 12px;
+      opacity: .96;
+      filter: brightness(1.08) contrast(1.02) saturate(1.15);
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, rgba(0,0,0,.75) 78%, rgba(0,0,0,.3) 92%, transparent 100%);
+              mask-image: radial-gradient(ellipse at center, #000 55%, rgba(0,0,0,.75) 78%, rgba(0,0,0,.3) 92%, transparent 100%);
+      transition: opacity .25s ease, filter .25s ease;
+    }
+    .logoheader:hover{ opacity: 1; filter: brightness(1.15) contrast(1.05) saturate(1.2); }
+    @media (max-width: 900px){
+      .logoheader{ height: 54px !important; }
+    }
+    @media (max-width: 540px){
+      .logoheader{ height: 46px !important; }
     }
     .headerbtn, .btntext .headerbtn, .headerbtn{
-      background: #ffd97a !important;
-      color:#1a0f2e !important;
-      font-weight: 700 !important;
+      background: transparent !important;
+      color: #ffd97a !important;
+      font-weight: 600 !important;
       letter-spacing: .04em !important;
-      padding: 12px 22px !important;
+      padding: 10px 18px !important;
+      border: 1px solid rgba(255,217,122,.45) !important;
       border-radius: 999px !important;
-      box-shadow: 0 4px 14px rgba(0,0,0,.18) !important;
-      transition: background .2s ease, transform .2s ease, box-shadow .2s ease !important;
+      box-shadow: none !important;
+      transition: color .2s ease, border-color .2s ease, transform .2s ease !important;
     }
     .headerbtn:hover{
+      color: #ffffff !important;
+      border-color: rgba(255,255,255,.7) !important;
       transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.22) !important;
+      box-shadow: none !important;
     }
 
     /* ---- Hero ---- */
@@ -281,19 +296,20 @@
 
     /* ---- Hero subtitle (mission tagline) ---- */
     .hero-subtitle{
-      max-width: none;
+      max-width: 100%;
       margin: 0 !important;
+      padding-left: 0;
       text-align: left;
       font-family: 'Inter', sans-serif;
-      font-size: 17px !important;
+      font-size: 13px !important;
       line-height: 1.6 !important;
       font-weight: 500;
-      color: rgba(245,242,250,.82) !important;
+      color: rgba(245,242,250,.72) !important;
     }
     .hero-headline-row{
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 40px;
+      grid-template-columns: minmax(0, 1.65fr) minmax(0, 0.35fr);
+      gap: 48px;
       align-items: center;
       width: 100%;
       margin: 8px 0 0;
@@ -304,12 +320,28 @@
       align-items: flex-start;
       gap: 4px;
       text-align: left;
+      min-width: 0;
     }
     .hero-h1{
       text-align: left !important;
       margin: 0 !important;
-      font-size: 52px !important;
-      line-height: 1.08 !important;
+      font-size: clamp(18px, 2vw, 28px) !important;
+      line-height: 1.2 !important;
+      font-weight: 400 !important;
+      white-space: nowrap;
+      letter-spacing: .02em;
+      color: rgba(245,242,250,.7) !important;
+    }
+    /* AD accent within BORDERLESSAD — warm yellow gradient */
+    .text-span-2 .ad-accent{
+      background: linear-gradient(135deg, #fff3a8 0%, #ffd84d 45%, #f5b400 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      color: transparent !important;
+      filter:
+        drop-shadow(0 0 6px rgba(255,220,120,.32))
+        drop-shadow(0 0 20px rgba(245,180,0,.20));
     }
     @media (max-width: 900px){
       .hero-headline-row{
@@ -318,8 +350,9 @@
         text-align: center;
       }
       .hero-headline-left{ align-items: center; text-align: center; }
-      .hero-h1{ text-align: center !important; font-size: 38px !important; }
+      .hero-h1{ text-align: center !important; font-size: 30px !important; white-space: normal; }
       .hero-subtitle{ text-align: center; font-size: 15px !important; padding: 0 8px; }
+      .text-span-2{ text-align: center; white-space: normal; font-size: clamp(56px, 14vw, 104px) !important; }
     }
     .hero-subtitle .accent{
       color: #ffffff;
@@ -356,16 +389,18 @@
       align-items: center;
       gap: 8px;
       margin: 0 auto 14px;
-      padding: 6px 16px;
+      padding: 7px 18px;
       border-radius: 999px;
-      background: rgba(255,224,138,.08);
-      border: 1px solid rgba(255,224,138,.25);
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.10);
       font-family: 'Inter', sans-serif;
       font-size: 12px;
       font-weight: 600;
-      letter-spacing: .08em;
-      color: var(--gold);
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: rgba(245,242,250,.62);
     }
+    .hero-scientist-badge svg{ stroke: rgba(245,242,250,.65) !important; }
     @media (max-width: 600px){
       .hero-subtitle{ font-size: 15px !important; padding: 0 16px; }
     }
@@ -1219,7 +1254,13 @@
       width: 100%;
       max-width: 1180px;
       margin: 36px auto 0;
-      padding: 0 24px;
+      padding: 22px 28px 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 8px 28px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.06);
     }
     .hero-dsp-title{
       text-align: center;
@@ -1233,39 +1274,63 @@
     }
     .hero-dsp-flex{
       display: flex;
-      flex-wrap: nowrap;
-      gap: 8px;
+      flex-wrap: wrap;
+      gap: 12px 28px;
       justify-content: center;
-      align-items: stretch;
+      align-items: center;
     }
+    /* Reset card chrome — hero variant renders partners as light chips */
     .hero-dsp-flex .dsp-partner-card{
-      flex: 1 1 0;
-      min-width: 0;
-      max-width: 140px;
-      padding: 12px 8px;
-      font-size: 16px;
-      border-radius: 14px;
+      all: unset;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      flex: 0 0 auto;
+      max-width: none;
+      padding: 6px 14px;
+      background: rgba(255,255,255,.05) !important;
+      border: 1px solid rgba(255,255,255,.09) !important;
+      border-radius: 999px !important;
+      box-shadow: none !important;
+      backdrop-filter: blur(4px) !important;
+      -webkit-backdrop-filter: blur(4px) !important;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+      cursor: default;
     }
+    .hero-dsp-flex .dsp-partner-card::before{ display: none !important; content: none !important; }
+    .hero-dsp-flex .dsp-partner-card:hover{
+      background: rgba(255,255,255,.09) !important;
+      border-color: rgba(255,255,255,.16) !important;
+      transform: translateY(-1px);
+      box-shadow: none !important;
+    }
+    /* Subtle differentiation: alternate chips get a faint warm/cool tint */
+    .hero-dsp-flex .dsp-partner-card:nth-child(3n+1){ background: rgba(255,255,255,.05) !important; }
+    .hero-dsp-flex .dsp-partner-card:nth-child(3n+2){ background: rgba(255,220,120,.045) !important; border-color: rgba(255,220,120,.12) !important; }
+    .hero-dsp-flex .dsp-partner-card:nth-child(3n+3){ background: rgba(120,200,230,.045) !important; border-color: rgba(120,200,230,.12) !important; }
     .hero-dsp-flex .dsp-partner-card .dsp-name{
+      font-family: 'Inter', sans-serif !important;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .03em;
+      color: rgba(245,242,250,.86);
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      overflow: visible;
+      text-overflow: clip;
+      transition: color .2s ease;
     }
+    .hero-dsp-flex .dsp-partner-card:hover .dsp-name{ color: #ffffff; }
+    /* No divider — chips themselves provide separation */
+    .hero-dsp-flex .dsp-partner-card:not(:last-child)::after{ display: none !important; content: none !important; }
     @media (max-width: 900px){
-      .hero-dsp-flex{ flex-wrap: wrap; gap: 10px; }
-      .hero-dsp-flex .dsp-partner-card{
-        flex: 1 1 110px;
-        max-width: 160px;
-        font-size: 17px;
-        padding: 14px 10px;
-      }
+      .hero-dsp-flex{ gap: 8px 10px; }
+      .hero-dsp-flex .dsp-partner-card{ padding: 5px 12px !important; }
+      .hero-dsp-flex .dsp-partner-card .dsp-name{ font-size: 13px; }
     }
     @media (max-width: 600px){
-      .hero-dsp-flex .dsp-partner-card{
-        flex: 1 1 100px;
-        font-size: 15px;
-        padding: 10px 6px;
-      }
+      .hero-dsp-flex{ gap: 6px 8px; }
+      .hero-dsp-flex .dsp-partner-card{ padding: 4px 10px !important; }
+      .hero-dsp-flex .dsp-partner-card .dsp-name{ font-size: 12px; letter-spacing: .02em; }
       .hero-dsp-title{ font-size: 11px; letter-spacing: .25em; }
     }
     .main-paragraph{ color: rgba(245,242,250,.82) !important; }
@@ -1281,17 +1346,21 @@
       display: block;
       width: 100%;
       text-align: left;
-      background: linear-gradient(135deg, #b8d3e8 0%, #7fa0bb 60%, #6a86a8 100%) !important;
+      background: linear-gradient(90deg, #c8dcff 0%, #ffffff 40%, #fff0c8 75%, #ffd98a 100%) !important;
       -webkit-background-clip: text !important;
       background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
       color: transparent !important;
       font-family: 'Anton','Oswald',sans-serif !important;
-      letter-spacing: -.01em !important;
-      filter: none;
+      font-weight: 900 !important;
+      font-size: clamp(56px, 8.2vw, 120px) !important;
+      letter-spacing: -.02em !important;
+      filter: drop-shadow(0 2px 12px rgba(180,200,255,.12));
       animation: none;
-      margin-top: 4px;
+      margin-top: 6px;
       line-height: .92;
+      white-space: nowrap;
+      overflow: visible;
     }
     @keyframes shimmer{
       0%,100%{ filter: none; }
@@ -1303,12 +1372,15 @@
       max-width: 1100px;
       margin: 72px auto !important;
       padding: 52px 32px !important;
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045) 0%, rgba(255,255,255,.02) 100%),
+        radial-gradient(circle at 18% 0%, rgba(167,139,250,.08), transparent 55%),
+        radial-gradient(circle at 82% 100%, rgba(94,224,216,.06), transparent 55%);
+      border: 1px solid rgba(255,255,255,0.10);
       border-radius: 24px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 12px 40px rgba(0,0,0,.20);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 18px 48px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.07);
     }
     .logo-block p{
       color: rgba(245,242,250,.82) !important;
@@ -1604,7 +1676,12 @@
       padding-bottom: 48px;
     }
     .footer-brand .footer-logo{
-      height: 32px; width:auto; margin-bottom: 16px; display:block;
+      height: 56px; width:auto; margin-bottom: 18px; display:block;
+      border-radius: 10px;
+      opacity: .92;
+      filter: brightness(1.05) contrast(1) saturate(1.1);
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, rgba(0,0,0,.7) 78%, rgba(0,0,0,.25) 92%, transparent 100%);
+              mask-image: radial-gradient(ellipse at center, #000 55%, rgba(0,0,0,.7) 78%, rgba(0,0,0,.25) 92%, transparent 100%);
     }
     .footer-brand p{
       color: rgba(255,245,230,.65);
@@ -1698,6 +1775,187 @@
       .footer-bottom{ flex-direction: column; align-items: flex-start; padding: 20px 0 28px; }
     }
 
+    /* ===== Unified page-level horizontal alignment =====
+       Forces every top-level content section to share the same
+       max-width and left/right padding so visible edges line up. */
+    .heroscreen,
+    .bannersection,
+    .heading-section,
+    .cards-section,
+    .halfbanner,
+    .equalhalfbanner,
+    .popup,
+    .logo-section,
+    .mmp-strip,
+    .mission-section,
+    .aiad-section,
+    .platforms-section,
+    .strengths-section,
+    .proven-stats-section,
+    .site-footer{
+      max-width: 1280px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 32px !important;
+      padding-right: 32px !important;
+      box-sizing: border-box !important;
+    }
+    .logo-block{
+      max-width: 1216px !important; /* 1280 - 32*2 to align with content edge */
+    }
+    @media (max-width: 600px){
+      .heroscreen,
+      .bannersection,
+      .heading-section,
+      .cards-section,
+      .halfbanner,
+      .equalhalfbanner,
+      .popup,
+      .logo-section,
+      .mmp-strip,
+      .mission-section,
+      .aiad-section,
+      .platforms-section,
+      .strengths-section,
+      .proven-stats-section,
+      .site-footer{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+
+    /* ===== Proven Results stat grid ===== */
+    .proven-heading{
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .proven-eyebrow{
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .proven-title{
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #f5f2fa;
+      margin: 0 0 14px;
+    }
+    .proven-title .accent{
+      background: linear-gradient(135deg, #b8d3e8 0%, #7fa0bb 60%, #6a86a8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .proven-sub{
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(245,242,250,.65);
+      margin: 0;
+    }
+    .proven-stats-section{
+      margin-top: 44px !important;
+    }
+    .proven-stats-grid{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      width: 100%;
+    }
+    .proven-stat-card{
+      position: relative;
+      padding: 32px 24px 28px;
+      border-radius: 20px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%);
+      border: 1px solid rgba(255,255,255,0.07);
+      backdrop-filter: blur(8px);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      overflow: hidden;
+    }
+    .proven-stat-card::before{
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,217,122,.55), transparent);
+      opacity: .65;
+    }
+    .proven-stat-card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(255,217,122,0.25);
+      box-shadow: 0 16px 40px rgba(0,0,0,.30);
+    }
+    .proven-num{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: clamp(40px, 4.6vw, 60px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -.01em;
+      background: linear-gradient(135deg, #c5dcef 0%, #88a8c5 60%, #6a86a8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+    }
+    .proven-num .prefix{
+      font-size: .6em;
+      margin-right: 2px;
+      opacity: .85;
+    }
+    .proven-num .unit{
+      font-size: .55em;
+      letter-spacing: .02em;
+      margin-left: 4px;
+      font-weight: 600;
+      opacity: .9;
+    }
+    .proven-divider{
+      width: 36px;
+      height: 2px;
+      background: var(--gold);
+      opacity: .55;
+      margin: 18px 0 14px;
+      border-radius: 2px;
+    }
+    .proven-label{
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #f5f2fa;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .proven-desc{
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba(245,242,250,.55);
+      margin: 0;
+    }
+    @media (max-width: 1100px){
+      .proven-stats-grid{ grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 760px){
+      .proven-stats-grid{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .proven-stat-card{ padding: 24px 18px 22px; }
+    }
+    @media (max-width: 480px){
+      .proven-stats-grid{ grid-template-columns: 1fr; }
+    }
+
     /* About-us paragraphs (inline white text already) — boost readability */
     .logo-block p[style*="color: white"]{ color: rgba(255,245,230,.92) !important; }
 
@@ -1752,15 +2010,15 @@
       /* AI heritage */
       .aiad-heritage{ gap: 14px 20px !important; padding: 18px 16px !important; }
       .aiad-heritage .heritage-item .heritage-num{ font-size: 24px !important; }
-      /* Hero ADX partner cards */
-      .hero-dsp-flex{ gap: 6px !important; }
+      /* Hero ADX partner chips */
+      .hero-dsp-flex{ gap: 6px 8px !important; }
       .hero-dsp-flex .dsp-partner-card{
         max-width: none !important;
-        flex: 1 1 30% !important;
-        font-size: 13px !important;
-        padding: 10px 6px !important;
-        border-radius: 12px !important;
+        flex: 0 0 auto !important;
+        padding: 4px 10px !important;
+        border-radius: 999px !important;
       }
+      .hero-dsp-flex .dsp-partner-card .dsp-name{ font-size: 12px !important; }
       .hero-dsp-title{ font-size: 10px !important; letter-spacing: .2em !important; }
       /* Lang dropdown hide on very small screens */
       .lang-dropdown{ display: none !important; }
@@ -1775,10 +2033,9 @@
       .strengths-title{ font-size: 30px !important; }
       .aiad-title{ font-size: 36px !important; }
       .aiad-sub{ font-size: 14px !important; }
-      .hero-dsp-flex .dsp-partner-card{
-        flex: 1 1 28% !important;
-        font-size: 11px !important;
-      }
+      .hero-dsp-flex{ gap: 5px 6px !important; }
+      .hero-dsp-flex .dsp-partner-card{ padding: 3px 9px !important; }
+      .hero-dsp-flex .dsp-partner-card .dsp-name{ font-size: 11px !important; }
       .cs-hero h1{ font-size: 36px !important; }
     }
   </style>
@@ -1786,9 +2043,28 @@
 </head>
 
 <body class="body">
+  <!-- SVG filter: makes near-white pixels transparent (used by .logoheader / .footer-logo) -->
+  <svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="removeWhite" color-interpolation-filters="sRGB">
+        <!-- Halo-killing pipeline: pure white → transparent, but anything even slightly off-white
+             snaps to full opacity at original brightness. The slope=6 threshold compresses the
+             premultiplied-alpha transition zone to a 1–2px feather, eliminating the dark grey
+             ring artefact that would otherwise appear around the logo on the dark page. -->
+        <feColorMatrix type="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          -1 -1 -1 0 3"/>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="6" intercept="0"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
   <section id="top" data-w-id="d8348b62-9688-1fc5-307c-4b75655f5d60" class="header"><a href=""
-      aria-current="page" class="logolinks w-inline-block w--current"><img src="images/logo-borderlessad.svg"
-        loading="lazy" width="180" height="Auto" alt="BorderlessAd logo" class="logoheader" /></a>
+      aria-current="page" class="logolinks w-inline-block w--current"><img src="frame-202131330264.png"
+        loading="lazy" alt="Borderless AI Limited logo" class="logoheader" /></a>
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
       role="banner" class="navbar w-nav">
       <div class="headernav w-container">
@@ -1824,7 +2100,7 @@
 
         </nav>
         <a data-w-id="d8348b62-9688-1fc5-307c-4b75655f5d7e" href="#" class="btntext headmob w-inline-block">
-          <div class="headerbtn">Reach our team</div>
+          <div class="headerbtn">CONTACT US</div>
         </a>
       </div>
       <div data-animation="over-left" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
@@ -1835,7 +2111,7 @@
           </div>
           <nav role="navigation" class="nav-menu w-nav-menu">
             <a href="" aria-current="page" class="logolinks open w-inline-block w--current"><img
-                src="images/logo-borderlessad.svg" loading="lazy" width="180" height="Auto" alt="BorderlessAd logo"
+                src="frame-202131330264.png" loading="lazy" alt="Borderless AI Limited logo"
                 class="logoheader" /></a>
  
             <a data-w-id="d8348b62-9688-1fc5-307c-4b75655f5d90" href="#"
@@ -1852,7 +2128,7 @@
       <div class="hero-headline-row">
         <div class="hero-headline-left">
           <h1 class="main-paragraph leftdesktop hero-h1">Scale your mobile growth with</h1>
-          <span class="text-span-2" style="font-size:140px;">BorderlessAd</span>
+          <span class="text-span-2">BORDERLESS<span class="ad-accent">AD</span></span>
         </div>
         <p class="hero-subtitle">
           An <span class="accent">AI-powered advertising platform</span> delivering
@@ -2090,6 +2366,41 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
       <div class="stat"><span class="num">&lt; 100ms</span><span class="lbl">RTB response</span></div>
     </div>
   </section>
+  <section id="ecosystem" class="heading-section magrintop">
+    <h2 class="heading2">our advertising ecosystem</h2>
+  </section>
+  <section class="cards-section smallmargintop">
+    <div class="ecosystem-grid">
+      <div class="ecosystem-card">
+        <img src="images/illus-global-app-ads.svg" loading="lazy" alt="Borderless global mobile app advertising" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">Borderless global reach</h3>
+          <p class="main-paragraph">Cross-region user acquisition for mobile apps on iOS and Android, powered by 8.2B+ user outreach across 150+ traffic sources.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-dsp-adx-flow.svg" loading="lazy" alt="DSP SSP ADX programmatic flow" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">DSP · SSP · ADX programmatic stack</h3>
+          <p class="main-paragraph">Self-owned ADX, SSP and DSP systems with sub-100ms RTB auctions, integrated with global developer affiliate platforms via API.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-appsflyer-attribution.svg" loading="lazy" alt="AppsFlyer Adjust Branch Kochava MMP attribution chain" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">MMP attribution — AppsFlyer &amp; more</h3>
+          <p class="main-paragraph">Native integration with AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker and Impact for end-to-end ROAS and LTV tracking.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-mobile-creative.svg" loading="lazy" alt="AI-powered mobile ad creative variants" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">AI creative — fully managed</h3>
+          <p class="main-paragraph">From creative production to campaign rollout, our AI scans thousands of creatives daily to deliver regionalized, market-driven variants.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="ai-plus-ad" class="aiad-section">
     <div class="aiad-inner">
       <div class="aiad-eyebrow"><span class="pulse"></span>AI · ALGORITHM · AD TECH</div>
@@ -2247,41 +2558,6 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
       </div>
     </div>
   </section>
-  <section id="ecosystem" class="heading-section magrintop">
-    <h2 class="heading2">our advertising ecosystem</h2>
-  </section>
-  <section class="cards-section smallmargintop">
-    <div class="ecosystem-grid">
-      <div class="ecosystem-card">
-        <img src="images/illus-global-app-ads.svg" loading="lazy" alt="Borderless global mobile app advertising" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">Borderless global reach</h3>
-          <p class="main-paragraph">Cross-region user acquisition for mobile apps on iOS and Android, powered by 8.2B+ user outreach across 150+ traffic sources.</p>
-        </div>
-      </div>
-      <div class="ecosystem-card">
-        <img src="images/illus-dsp-adx-flow.svg" loading="lazy" alt="DSP SSP ADX programmatic flow" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">DSP · SSP · ADX programmatic stack</h3>
-          <p class="main-paragraph">Self-owned ADX, SSP and DSP systems with sub-100ms RTB auctions, integrated with global developer affiliate platforms via API.</p>
-        </div>
-      </div>
-      <div class="ecosystem-card">
-        <img src="images/illus-appsflyer-attribution.svg" loading="lazy" alt="AppsFlyer Adjust Branch Kochava MMP attribution chain" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">MMP attribution — AppsFlyer &amp; more</h3>
-          <p class="main-paragraph">Native integration with AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker and Impact for end-to-end ROAS and LTV tracking.</p>
-        </div>
-      </div>
-      <div class="ecosystem-card">
-        <img src="images/illus-mobile-creative.svg" loading="lazy" alt="AI-powered mobile ad creative variants" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">AI creative — fully managed</h3>
-          <p class="main-paragraph">From creative production to campaign rollout, our AI scans thousands of creatives daily to deliver regionalized, market-driven variants.</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="mmp-strip">
     <div class="mmp-eyebrow">Automated Attribution Integrations</div>
     <div class="mmp-flex">
@@ -2357,9 +2633,6 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
       </div>
     </div>
   </section>
-  <section class="bannersection innerpadding margintop additionalmobilepadding greenbg">
-    <h2 data-w-id="2ce6dbef-a3c7-1219-a92e-1c1dd017512b" style="opacity:0" class="heading2 centeralign maxwidth">Real Results With No Fluff</h2>
-  </section>
   <section class="heading-section magrintop">
     <h2 data-w-id="67119ae0-6e49-c449-5fb5-70ba00f91bea" style="opacity:0" class="heading2 sizefix">Where the Mobile Advertising Revolution Is Happening</h2>
   </section>
@@ -2421,9 +2694,6 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
   </section>
   <section class="bannersection innerpadding fixedheight"></section>
   <section class="bannersection innerpadding fixedheight mobile"></section> -->
-  <section class="heading-section magrintop">
-    <h2 data-w-id="708d333c-9a31-f536-0a0e-6899375bed51" style="opacity:0" class="heading2">our success stories</h2>
-  </section>
 
 
   <section class="heading-section magrintop" style="display: none">
@@ -2478,55 +2748,43 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
     </div>
   </section>
   <section class="heading-section magrintop">
-    <h2 data-w-id="6586d08b-6d88-22f7-ca15-33f0b49f87f0" style="opacity:0" class="heading2">proven results</h2>
+    <div class="proven-heading">
+      <div class="proven-eyebrow">Proven Results</div>
+      <h2 class="proven-title">Numbers that <span class="accent">speak for themselves</span></h2>
+      <p class="proven-sub">A decade of operating at global scale across mobile advertising, traffic acquisition, and audience reach.</p>
+    </div>
   </section>
-  <section class="cards-section smallmargintop">
-    <div class="w-layout-hflex cardsflex">
-      <div class="w-layout-vflex numbercard _50flex">
-        <div class="w-layout-vflex textflex smallergap">
-          <div class="w-layout-hflex numflex">
-            <p class="heading2 black">8.2</p>
-            <p class="heading2 black">billion</p>
-          </div>
-          <p class="main-paragraph black">total user outreach</p>
-        </div>
+  <section class="proven-stats-section">
+    <div class="proven-stats-grid">
+      <div class="proven-stat-card">
+        <div class="proven-num">8.2<span class="unit">B</span></div>
+        <div class="proven-divider"></div>
+        <div class="proven-label">Total User Outreach</div>
+        <div class="proven-desc">Cumulative global users reached across our owned and partnered networks.</div>
       </div>
-      <div class="w-layout-vflex numbercard _50flex pink">
-        <div class="w-layout-vflex textflex smallergap">
-          <div class="w-layout-hflex numflex">
-            <p class="heading2 black">$</p>
-            <p class="heading2 black">1.2</p>
-            <p class="heading2 black">billion+</p>
-          </div>
-          <p class="main-paragraph black">promote products worth</p>
-        </div>
+      <div class="proven-stat-card">
+        <div class="proven-num"><span class="prefix">$</span>1.2<span class="unit">B+</span></div>
+        <div class="proven-divider"></div>
+        <div class="proven-label">Products Promoted</div>
+        <div class="proven-desc">Aggregate value of advertiser products promoted through the platform.</div>
       </div>
-      <div class="w-layout-vflex numbercard _33flex violet">
-        <div class="w-layout-vflex textflex smallergap">
-          <div class="w-layout-hflex numflex">
-            <p class="heading2">1.0</p>
-            <p class="heading2">billion</p>
-          </div>
-          <p class="main-paragraph">daily active users</p>
-        </div>
+      <div class="proven-stat-card">
+        <div class="proven-num">1.0<span class="unit">B</span></div>
+        <div class="proven-divider"></div>
+        <div class="proven-label">Daily Active Users</div>
+        <div class="proven-desc">Real users engaging with ads and content across our integrated traffic sources every day.</div>
       </div>
-      <div class="w-layout-vflex numbercard _33flex green">
-        <div class="w-layout-vflex textflex smallergap">
-          <div class="w-layout-hflex numflex">
-            <p class="heading2">6</p>
-            <p class="heading2">billion</p>
-          </div>
-          <p class="main-paragraph">daily ad requests</p>
-        </div>
+      <div class="proven-stat-card">
+        <div class="proven-num">6<span class="unit">B</span></div>
+        <div class="proven-divider"></div>
+        <div class="proven-label">Daily Ad Requests</div>
+        <div class="proven-desc">Real-time bid requests processed by our ADX with sub-100ms RTB response.</div>
       </div>
-      <div class="w-layout-vflex numbercard _33flex puprle">
-        <div class="w-layout-vflex textflex smallergap">
-          <div class="w-layout-hflex numflex">
-            <p class="heading2">4.5</p>
-            <p class="heading2">billion</p>
-          </div>
-          <p class="main-paragraph">unique mobile devices reached</p>
-        </div>
+      <div class="proven-stat-card">
+        <div class="proven-num">4.5<span class="unit">B</span></div>
+        <div class="proven-divider"></div>
+        <div class="proven-label">Unique Mobile Devices</div>
+        <div class="proven-desc">Distinct iOS and Android devices reached through our worldwide ad inventory.</div>
       </div>
     </div>
   </section>
@@ -2621,7 +2879,7 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
       <div class="footer-grid">
         <!-- Brand block -->
         <div class="footer-brand">
-          <img src="images/logo-borderlessad.svg" loading="lazy" alt="BorderlessAd" class="footer-logo" />
+          <img src="frame-202131330264.png" loading="lazy" alt="Borderless AI Limited" class="footer-logo" />
           <p>The AI-powered advertising and media platform helping brands grow globally across mobile, web, and connected TV.</p>
           <div class="footer-social" aria-label="Social media">
             <a href="javascript:void(0)" onclick="return false;" aria-label="LinkedIn">in</a>
