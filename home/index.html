@@ -356,12 +356,22 @@
       -webkit-text-fill-color: #ffffff;
       font-weight: 600;
     }
+    /* ---- Hero badges row (single line) ---- */
+    .hero-badges-row{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      width: 100%;
+      margin: 0 0 14px;
+    }
     /* ---- Hero AI badge ---- */
     .hero-ai-badge{
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 0 auto 10px;
+      margin: 0;
       padding: 7px 18px;
       border-radius: 999px;
       background: rgba(77,232,255,.10);
@@ -372,6 +382,8 @@
       letter-spacing: .25em;
       text-transform: uppercase;
       color: var(--cyan);
+      white-space: nowrap;
+      flex: 0 0 auto;
     }
     .hero-ai-badge .ai-pulse{
       width: 8px; height: 8px;
@@ -384,7 +396,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 0 auto 14px;
+      margin: 0;
       padding: 7px 18px;
       border-radius: 999px;
       background: rgba(255,255,255,.035);
@@ -395,8 +407,14 @@
       letter-spacing: .25em;
       text-transform: uppercase;
       color: rgba(245,242,250,.62);
+      white-space: nowrap;
+      flex: 0 0 auto;
     }
     .hero-scientist-badge svg{ stroke: rgba(245,242,250,.65) !important; }
+    @media (max-width: 760px){
+      .hero-badges-row{ flex-wrap: wrap; gap: 8px; }
+      .hero-ai-badge, .hero-scientist-badge{ font-size: 10px; padding: 5px 12px; letter-spacing: .15em; white-space: normal; }
+    }
     @media (max-width: 600px){
       .hero-subtitle{ font-size: 15px !important; padding: 0 16px; }
     }
@@ -2200,8 +2218,10 @@
   </section>
   <section class="heroscreen innerpadding margintop">
     <div class="w-layout-vflex herotext">
-      <div class="hero-ai-badge"><span class="ai-pulse"></span>AI + AD · Intelligent Advertising &amp; Media</div>
-      <div class="hero-scientist-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3 6l-1 5H9l-1-5c-1.5-1.5-3-3.5-3-6a7 7 0 0 1 7-7z"/><line x1="9" y1="19" x2="15" y2="19"/></svg> Powered by dozens of top-tier AI scientists</div>
+      <div class="hero-badges-row">
+        <div class="hero-ai-badge"><span class="ai-pulse"></span>AI + AD · Intelligent Advertising &amp; Media</div>
+        <div class="hero-scientist-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3 6l-1 5H9l-1-5c-1.5-1.5-3-3.5-3-6a7 7 0 0 1 7-7z"/><line x1="9" y1="19" x2="15" y2="19"/></svg> Powered by dozens of top-tier AI scientists</div>
+      </div>
       <h1 class="main-paragraph leftdesktop hero-h1">Scale your mobile growth with</h1>
       <span class="text-span-2">BORDERLESS<span class="ad-accent">AD</span></span>
       <p class="hero-subtitle">
