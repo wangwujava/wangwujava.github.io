@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#22e1ff" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#070217" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0843"/>
+      <stop offset="100%" stop-color="#070217"/>
+    </linearGradient>
+    <linearGradient id="ad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff2d92"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+    <linearGradient id="ad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22e1ff"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+    <linearGradient id="ad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ff8a3d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg4)"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="14" fill="#fff" opacity=".75" letter-spacing="3">AI-POWERED CREATIVE</text>
+
+  <!-- Phone -->
+  <g transform="translate(310 75)">
+    <rect x="0" y="0" width="180" height="370" rx="34" fill="url(#phone)" stroke="url(#ad1)" stroke-width="3"/>
+    <rect x="68" y="0" width="44" height="7" rx="3.5" fill="#fff" fill-opacity=".3"/>
+    <rect x="10" y="22" width="160" height="328" rx="22" fill="#fff" fill-opacity=".05"/>
+    <text x="22" y="44" font-family="Inter,Arial,sans-serif" font-size="9" fill="#fff" opacity=".6">9:41</text>
+    <circle cx="156" cy="42" r="2.2" fill="#22e1ff"/>
+    <!-- Ad in screen -->
+    <rect x="22" y="58" width="136" height="184" rx="12" fill="url(#ad1)"/>
+    <circle cx="90" cy="124" r="36" fill="#fff" fill-opacity=".25"/>
+    <polygon points="80,109 80,139 108,124" fill="#fff"/>
+    <text x="90" y="180" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="14" fill="#fff" letter-spacing="2">DOWNLOAD NOW</text>
+    <rect x="50" y="195" width="80" height="24" rx="12" fill="#ffd166"/>
+    <text x="90" y="211" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="11" fill="#1a0033" letter-spacing="2">INSTALL</text>
+    <!-- Caption blocks -->
+    <rect x="22" y="256" width="100" height="6" rx="3" fill="#fff" fill-opacity=".5"/>
+    <rect x="22" y="268" width="80" height="6" rx="3" fill="#fff" fill-opacity=".3"/>
+    <rect x="22" y="288" width="136" height="40" rx="8" fill="#fff" fill-opacity=".08"/>
+  </g>
+
+  <!-- Floating creative variants -->
+  <g transform="translate(80 130) rotate(-8)" opacity=".95">
+    <rect x="0" y="0" width="130" height="86" rx="14" fill="url(#ad2)"/>
+    <text x="65" y="44" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="18" fill="#fff" letter-spacing="2">VARIANT A</text>
+    <rect x="20" y="56" width="50" height="6" rx="3" fill="#fff" fill-opacity=".5"/>
+    <rect x="20" y="66" width="40" height="6" rx="3" fill="#fff" fill-opacity=".3"/>
+  </g>
+  <g transform="translate(115 250) rotate(6)" opacity=".95">
+    <rect x="0" y="0" width="130" height="86" rx="14" fill="url(#ad3)"/>
+    <text x="65" y="44" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="18" fill="#1a0033" letter-spacing="2">VARIANT B</text>
+    <rect x="20" y="56" width="50" height="6" rx="3" fill="#1a0033" fill-opacity=".4"/>
+    <rect x="20" y="66" width="40" height="6" rx="3" fill="#1a0033" fill-opacity=".25"/>
+  </g>
+  <g transform="translate(560 130) rotate(8)" opacity=".95">
+    <rect x="0" y="0" width="130" height="86" rx="14" fill="url(#ad1)"/>
+    <text x="65" y="44" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="18" fill="#fff" letter-spacing="2">VARIANT C</text>
+    <rect x="20" y="56" width="50" height="6" rx="3" fill="#fff" fill-opacity=".5"/>
+    <rect x="20" y="66" width="40" height="6" rx="3" fill="#fff" fill-opacity=".3"/>
+  </g>
+  <g transform="translate(580 256) rotate(-6)" opacity=".95">
+    <rect x="0" y="0" width="130" height="86" rx="14" fill="url(#ad2)"/>
+    <text x="65" y="44" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="18" fill="#fff" letter-spacing="2">VARIANT D</text>
+    <rect x="20" y="56" width="50" height="6" rx="3" fill="#fff" fill-opacity=".5"/>
+    <rect x="20" y="66" width="40" height="6" rx="3" fill="#fff" fill-opacity=".3"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#ffd166">
+    <path d="M 220 100 L 224 110 L 234 114 L 224 118 L 220 128 L 216 118 L 206 114 L 216 110 Z"/>
+    <path d="M 540 100 L 543 108 L 551 111 L 543 114 L 540 122 L 537 114 L 529 111 L 537 108 Z" opacity=".8"/>
+    <path d="M 270 380 L 273 388 L 281 391 L 273 394 L 270 402 L 267 394 L 259 391 L 267 388 Z" opacity=".85"/>
+    <path d="M 540 400 L 543 408 L 551 411 L 543 414 L 540 422 L 537 414 L 529 411 L 537 408 Z" opacity=".75"/>
+    <path d="M 400 65 L 403 73 L 411 76 L 403 79 L 400 87 L 397 79 L 389 76 L 397 73 Z" opacity=".7"/>
+  </g>
+
+  <!-- Connecting beams -->
+  <g stroke="#ffd166" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 4" fill="none">
+    <line x1="210" y1="170" x2="310" y2="180"/>
+    <line x1="245" y1="290" x2="310" y2="280"/>
+    <line x1="560" y1="170" x2="490" y2="180"/>
+    <line x1="580" y1="290" x2="490" y2="280"/>
+  </g>
+
+  <!-- Caption -->
+  <text x="400" y="475" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="12" fill="#fff" opacity=".75" letter-spacing="3">CREATIVE · IMAGING · REGIONALIZATION · MARKET-DRIVEN</text>
+</svg>

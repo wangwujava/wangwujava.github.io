@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#7b2cff" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#070217" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ssp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22e1ff"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+    <linearGradient id="adx" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff2d92"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+    <linearGradient id="dsp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8a3d"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22e1ff"/>
+      <stop offset="50%" stop-color="#ff2d92"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <marker id="arrowEnd" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#ff2d92"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg2)"/>
+
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="14" fill="#fff" opacity=".75" letter-spacing="3">PROGRAMMATIC ADVERTISING FLOW</text>
+
+  <!-- SSP -->
+  <g transform="translate(60 180)">
+    <rect x="0" y="0" width="170" height="160" rx="20" fill="url(#ssp)" fill-opacity=".15" stroke="url(#ssp)" stroke-width="2.5"/>
+    <text x="85" y="48" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="40" fill="#fff">SSP</text>
+    <text x="85" y="72" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#22e1ff" letter-spacing="2">SUPPLY SIDE</text>
+    <rect x="55" y="92" width="60" height="50" rx="8" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.5"/>
+    <line x1="55" y1="106" x2="115" y2="106" stroke="#fff" stroke-opacity=".5"/>
+    <rect x="64" y="114" width="42" height="3" rx="1.5" fill="#22e1ff"/>
+    <rect x="64" y="122" width="28" height="3" rx="1.5" fill="#fff" fill-opacity=".5"/>
+    <rect x="64" y="130" width="36" height="3" rx="1.5" fill="#fff" fill-opacity=".5"/>
+  </g>
+
+  <!-- ADX -->
+  <g transform="translate(315 150)">
+    <rect x="0" y="0" width="170" height="220" rx="20" fill="url(#adx)" fill-opacity=".18" stroke="url(#adx)" stroke-width="3"/>
+    <text x="85" y="52" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="44" fill="#fff">ADX</text>
+    <text x="85" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#ff5ec4" letter-spacing="2">AD EXCHANGE</text>
+    <text x="85" y="106" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="11" fill="#ffd166" letter-spacing="1.5">RTB AUCTION</text>
+    <g transform="translate(25 122)">
+      <rect x="0" y="22" width="20" height="12" rx="2" fill="#ff2d92"/>
+      <rect x="26" y="14" width="20" height="20" rx="2" fill="#ff5ec4"/>
+      <rect x="52" y="4" width="20" height="30" rx="2" fill="#ffd166"/>
+      <rect x="78" y="-2" width="20" height="36" rx="2" fill="#ff8a3d"/>
+      <rect x="104" y="10" width="20" height="24" rx="2" fill="#ff2d92"/>
+    </g>
+    <text x="85" y="195" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#fff" opacity=".75">&lt; 100 ms response</text>
+  </g>
+
+  <!-- DSP -->
+  <g transform="translate(570 180)">
+    <rect x="0" y="0" width="170" height="160" rx="20" fill="url(#dsp)" fill-opacity=".18" stroke="url(#dsp)" stroke-width="2.5"/>
+    <text x="85" y="48" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="40" fill="#fff">DSP</text>
+    <text x="85" y="72" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#ffd166" letter-spacing="2">DEMAND SIDE</text>
+    <g transform="translate(35 92)">
+      <circle cx="0" cy="22" r="15" fill="#ffd166"/>
+      <text x="0" y="28" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="16" fill="#1a0033">$</text>
+      <circle cx="50" cy="22" r="15" fill="#ff8a3d"/>
+      <text x="50" y="28" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="16" fill="#1a0033">$</text>
+      <circle cx="100" cy="22" r="15" fill="#ff5ec4"/>
+      <text x="100" y="28" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="16" fill="#1a0033">$</text>
+    </g>
+    <text x="85" y="148" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="10" fill="#fff" opacity=".7" letter-spacing="1">BIDS · TARGETING · OPTIMIZATION</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <g fill="none" stroke="url(#flow)" stroke-width="3" stroke-linecap="round">
+    <path d="M 230 260 L 315 260" marker-end="url(#arrowEnd)"/>
+    <path d="M 485 260 L 570 260" marker-end="url(#arrowEnd)"/>
+  </g>
+
+  <!-- Bottom labels -->
+  <text x="145" y="370" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#fff" opacity=".65" letter-spacing="1.5">PUBLISHERS</text>
+  <text x="400" y="402" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#fff" opacity=".65" letter-spacing="1.5">REAL-TIME BIDDING</text>
+  <text x="655" y="370" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#fff" opacity=".65" letter-spacing="1.5">ADVERTISERS</text>
+
+  <!-- Footer pill -->
+  <g transform="translate(400 450)">
+    <rect x="-220" y="-22" width="440" height="44" rx="22" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".18"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="13" fill="#fff" opacity=".88">8.2B+ users · 6B daily ad requests · 1.0B DAU</text>
+  </g>
+</svg>

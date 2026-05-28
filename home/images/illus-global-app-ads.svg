@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#ff2d92" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#070217" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="globe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22e1ff"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ff2d92"/>
+    </linearGradient>
+    <linearGradient id="app1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff2d92"/>
+      <stop offset="100%" stop-color="#ff8a3d"/>
+    </linearGradient>
+    <linearGradient id="app2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22e1ff"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+    <linearGradient id="app3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ff5ec4"/>
+    </linearGradient>
+    <linearGradient id="app4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00d4a4"/>
+      <stop offset="100%" stop-color="#22e1ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Stars -->
+  <g fill="#fff" opacity=".75">
+    <circle cx="80" cy="60" r="1.6"/>
+    <circle cx="150" cy="120" r="1"/>
+    <circle cx="700" cy="80" r="1.6"/>
+    <circle cx="650" cy="180" r="1"/>
+    <circle cx="730" cy="350" r="1.4"/>
+    <circle cx="100" cy="400" r="1"/>
+    <circle cx="200" cy="450" r="1.6"/>
+    <circle cx="600" cy="430" r="1"/>
+    <circle cx="380" cy="50" r="1.2"/>
+    <circle cx="420" cy="470" r="1.2"/>
+  </g>
+
+  <!-- Orbit rings -->
+  <g transform="translate(400 250)">
+    <ellipse cx="0" cy="0" rx="240" ry="70" stroke="url(#globe)" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="3 6"/>
+    <ellipse cx="0" cy="0" rx="200" ry="200" stroke="url(#globe)" stroke-opacity=".35" stroke-width="2"/>
+  </g>
+
+  <!-- Globe -->
+  <g transform="translate(400 250)">
+    <circle cx="0" cy="0" r="130" fill="url(#globe)" fill-opacity=".18" stroke="url(#globe)" stroke-width="2.5"/>
+    <ellipse cx="0" cy="0" rx="130" ry="22" stroke="#22e1ff" stroke-opacity=".55" stroke-width="1" fill="none"/>
+    <ellipse cx="0" cy="0" rx="130" ry="65" stroke="#22e1ff" stroke-opacity=".5" stroke-width="1" fill="none"/>
+    <ellipse cx="0" cy="0" rx="130" ry="105" stroke="#22e1ff" stroke-opacity=".4" stroke-width="1" fill="none"/>
+    <ellipse cx="0" cy="0" rx="22" ry="130" stroke="#22e1ff" stroke-opacity=".55" stroke-width="1" fill="none"/>
+    <ellipse cx="0" cy="0" rx="65" ry="130" stroke="#22e1ff" stroke-opacity=".5" stroke-width="1" fill="none"/>
+    <ellipse cx="0" cy="0" rx="105" ry="130" stroke="#22e1ff" stroke-opacity=".4" stroke-width="1" fill="none"/>
+    <g fill="#ff2d92">
+      <circle cx="-55" cy="-30" r="4"/>
+      <circle cx="-32" cy="-18" r="3"/>
+      <circle cx="22" cy="-42" r="4"/>
+      <circle cx="44" cy="-10" r="3"/>
+      <circle cx="60" cy="22" r="3"/>
+      <circle cx="-42" cy="42" r="3"/>
+      <circle cx="50" cy="55" r="4"/>
+      <circle cx="-10" cy="0" r="3"/>
+    </g>
+  </g>
+
+  <!-- App icons -->
+  <g transform="translate(160 200)">
+    <rect x="-26" y="-26" width="52" height="52" rx="13" fill="url(#app1)"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="22" fill="#fff">A</text>
+  </g>
+  <g transform="translate(640 180)">
+    <rect x="-26" y="-26" width="52" height="52" rx="13" fill="url(#app2)"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="22" fill="#fff">B</text>
+  </g>
+  <g transform="translate(620 380)">
+    <rect x="-26" y="-26" width="52" height="52" rx="13" fill="url(#app3)"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="22" fill="#1a0033">C</text>
+  </g>
+  <g transform="translate(180 380)">
+    <rect x="-26" y="-26" width="52" height="52" rx="13" fill="url(#app4)"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="22" fill="#1a0033">D</text>
+  </g>
+
+  <!-- Signal arcs -->
+  <g fill="none" stroke-width="2" opacity=".7">
+    <path d="M 180 200 Q 280 150 320 220" stroke="url(#signal)"/>
+    <path d="M 620 200 Q 520 150 480 220" stroke="url(#signal)"/>
+    <path d="M 600 360 Q 520 320 480 280" stroke="url(#signal)"/>
+    <path d="M 200 360 Q 280 320 320 280" stroke="url(#signal)"/>
+  </g>
+
+  <!-- Caption -->
+  <text x="400" y="475" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="13" fill="#fff" opacity=".75" letter-spacing="3">BORDERLESS GLOBAL REACH · iOS &amp; ANDROID</text>
+</svg>
