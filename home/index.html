@@ -6,11 +6,11 @@
 <!-- Mirrored from www.adBorderlessAd.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2026 08:04:07 GMT -->
 <head>
   <meta charset="utf-8" />
-  <title>Home | BorderlessAd</title>
+  <title>BorderlessAd | Intelligent AI Advertising &amp; Media Platform</title>
   <link rel="alternate" hrefLang="x-default" href="../BorderlessAd.webflow.io/index.html" />
   <link rel="alternate" hrefLang="en-US" href="../BorderlessAd.webflow.io/index.html" />
   <meta
-    content="BorderlessAd specializes in user acquisition, revenue growth, and mobile app promotion. Our expert strategies help businesses scale effectively, engage audiences, and achieve measurable results. Let us drive your success in the competitive digital landscape."
+    content="BorderlessAd is an intelligent AI advertising and media platform. AI+AD tech delivering global CPI / CPA / CPS campaigns through worldwide traffic. Deep learning, algorithmic bidding, generative creative, and automated attribution via AppsFlyer, Adjust, Branch, Kochava and Singular."
     name="description" />
   <meta content="images/frame-202131330264.png" property="og:image" />
   <meta content="images/frame-202131330264.png" property="twitter:image" />
@@ -114,58 +114,45 @@
   <!-- ===== VIBRANT REDESIGN OVERRIDE — premium cosmic gradient theme ===== -->
   <style>
     :root{
-      --bg-0:#070217;
-      --bg-1:#13063b;
-      --bg-2:#2a0a6b;
-      --magenta:#ff2d92;
-      --pink:#ff5ec4;
-      --gold:#ffd166;
-      --orange:#ff8a3d;
-      --cyan:#22e1ff;
-      --violet:#7b2cff;
-      --ink:#0b0524;
-      --cream:#fff5e6;
-      --grad-hero: radial-gradient(ellipse at 20% 10%, rgba(255,45,146,.55) 0%, transparent 55%),
-                   radial-gradient(ellipse at 85% 30%, rgba(34,225,255,.45) 0%, transparent 55%),
-                   radial-gradient(ellipse at 60% 90%, rgba(255,209,102,.40) 0%, transparent 55%),
-                   linear-gradient(160deg, #070217 0%, #13063b 45%, #2a0a6b 100%);
-      --grad-accent: linear-gradient(135deg, #ff2d92 0%, #ff8a3d 50%, #ffd166 100%);
-      --grad-cool: linear-gradient(135deg, #22e1ff 0%, #7b2cff 100%);
-      --glass: rgba(255,255,255,0.07);
-      --glass-border: rgba(255,255,255,0.18);
+      --bg-0:#0e0b1a;
+      --bg-1:#14102a;
+      --bg-2:#1c1838;
+      /* Reduced palette: 1 warm + 1 cool, all muted/natural */
+      --magenta:#c97a8a;       /* muted dusty rose (was neon pink) */
+      --pink:#d4a48f;          /* soft warm tan */
+      --gold:#ffd97a;          /* warm gold — primary accent */
+      --orange:#e8b06a;        /* warm muted amber */
+      --cyan:#7aa9c9;          /* soft slate blue (was neon cyan) */
+      --violet:#8094b8;        /* muted cool slate (was bright violet) */
+      --ink:#0e0b1a;
+      --cream:#fffaf2;
+      --grad-hero: radial-gradient(ellipse at 20% 10%, rgba(255,217,122,.10) 0%, transparent 55%),
+                   radial-gradient(ellipse at 85% 30%, rgba(122,169,201,.08) 0%, transparent 55%),
+                   linear-gradient(160deg, #0e0b1a 0%, #14102a 50%, #1c1838 100%);
+      --grad-accent: linear-gradient(135deg, #ffd97a 0%, #ffc85c 100%);
+      --grad-cool: linear-gradient(135deg, #8aabc6 0%, #6a86a8 100%);
+      --glass: rgba(255,255,255,0.06);
+      --glass-border: rgba(255,255,255,0.14);
     }
 
     /* ---- Global background & fonts ---- */
     html, body, body.body{
-      background: var(--grad-hero) !important;
-      background-attachment: fixed !important;
-      color: var(--cream) !important;
+      background: #161320 !important;
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(255,217,122,.04), transparent 55%),
+        linear-gradient(180deg, #161320 0%, #1c1830 50%, #161320 100%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.018) 1px, transparent 1px) !important;
+      background-size: auto, auto, 56px 56px !important;
+      background-attachment: fixed, fixed, fixed !important;
+      color: #ebe8f0 !important;
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif !important;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
-    /* Floating orbs decoration */
+    /* Floating orbs decoration — disabled for cleaner portal look */
     body.body::before,
-    body.body::after{
-      content:"";
-      position: fixed;
-      width: 520px; height: 520px;
-      border-radius: 50%;
-      filter: blur(120px);
-      opacity: .55;
-      pointer-events: none;
-      z-index: 0;
-    }
-    body.body::before{
-      background: radial-gradient(circle, #ff2d92 0%, transparent 70%);
-      top: -160px; left: -140px;
-      animation: floatA 14s ease-in-out infinite alternate;
-    }
-    body.body::after{
-      background: radial-gradient(circle, #22e1ff 0%, transparent 70%);
-      bottom: -180px; right: -160px;
-      animation: floatB 18s ease-in-out infinite alternate;
-    }
+    body.body::after{ display:none; }
     @keyframes floatA { from{transform:translate(0,0)} to{transform:translate(60px,80px)} }
     @keyframes floatB { from{transform:translate(0,0)} to{transform:translate(-80px,-60px)} }
 
@@ -173,33 +160,49 @@
 
     /* ---- Header ---- */
     .header{
-      background: rgba(7,2,23,0.55) !important;
-      backdrop-filter: blur(18px) saturate(140%);
-      -webkit-backdrop-filter: blur(18px) saturate(140%);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 10px 40px rgba(255,45,146,0.08);
+      background: rgba(22,19,32,0.88) !important;
+      backdrop-filter: blur(20px) saturate(120%);
+      -webkit-backdrop-filter: blur(20px) saturate(120%);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      box-shadow: none !important;
     }
-    .logoheader{ filter: drop-shadow(0 0 14px rgba(255,45,146,.55)) brightness(1.15); }
-
+    .logoheader{
+      filter: none;
+      background: transparent !important;
+      mix-blend-mode: normal;
+      height: auto !important;
+      width: 180px !important;
+    }
     .headerbtn, .btntext .headerbtn, .headerbtn{
-      background: var(--grad-accent) !important;
-      color:#1a0033 !important;
+      background: #ffd97a !important;
+      color:#1a0f2e !important;
       font-weight: 700 !important;
       letter-spacing: .04em !important;
       padding: 12px 22px !important;
       border-radius: 999px !important;
-      box-shadow: 0 8px 28px rgba(255,138,61,.45), inset 0 0 0 1px rgba(255,255,255,.35) !important;
-      transition: transform .25s ease, box-shadow .25s ease !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,.18) !important;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease !important;
     }
     .headerbtn:hover{
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 14px 38px rgba(255,45,146,.55), inset 0 0 0 1px rgba(255,255,255,.5) !important;
+      background: #ffc85c !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.22) !important;
     }
 
     /* ---- Hero ---- */
     .heroscreen{ padding-top: 18px !important; }
     .heroscreen.margintop{ margin-top: 24px !important; }
     .heroscreen .herotext{ margin-top: 0 !important; padding-top: 0 !important; }
+    .heroscreen .main-paragraph.center.leftdesktop{
+      color: #fff !important;
+      text-shadow: none !important;
+      letter-spacing: -.02em !important;
+    }
+    .heroscreen .main-paragraph.center.leftdesktop{
+      color: #fff !important;
+      text-shadow: none !important;
+      letter-spacing: -.02em !important;
+    }
     @media (max-width: 991px){
       .heroscreen.margintop{ margin-top: 12px !important; }
       .heroscreen{ padding-top: 8px !important; }
@@ -232,7 +235,7 @@
       border: 1px solid var(--glass-border);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 18px 45px rgba(11,5,36,.45), inset 0 1px 0 rgba(255,255,255,.12);
+      box-shadow: 0 18px 45px rgba(15,10,30,.30), inset 0 1px 0 rgba(255,255,255,.12);
       transition: transform .35s ease, box-shadow .35s ease;
     }
     .dsp-partner-card::before{
@@ -243,14 +246,14 @@
     }
     .dsp-partner-card:hover{
       transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 28px 70px rgba(255,45,146,.35), inset 0 1px 0 rgba(255,255,255,.25);
+      box-shadow: 0 28px 70px rgba(0,0,0,.18);
     }
     .dsp-partner-card .dsp-name{
       position: relative;
       z-index: 1;
       display: block;
-      font-weight: 800;
-      text-shadow: 0 4px 20px rgba(0,0,0,.25);
+      font-weight: 700;
+      text-shadow: none;
     }
     .dsp-partner-card .dsp-tag{
       position: relative;
@@ -263,13 +266,923 @@
       font-weight: 600;
       color: rgba(255,255,255,.85);
     }
-    .dsp-card-1{ background: linear-gradient(135deg, #ff2d92 0%, #7b2cff 100%); }
-    .dsp-card-2{ background: linear-gradient(135deg, #ff8a3d 0%, #ff2d92 100%); }
-    .dsp-card-3{ background: linear-gradient(135deg, #22e1ff 0%, #7b2cff 100%); }
-    .dsp-card-4{ background: linear-gradient(135deg, #ffd166 0%, #ff5ec4 100%); color:#1a0033; }
-    .dsp-card-4 .dsp-tag{ color: rgba(26,0,51,.75); }
-    .dsp-card-5{ background: linear-gradient(135deg, #00d4a4 0%, #22e1ff 100%); }
-    .dsp-card-6{ background: linear-gradient(135deg, #7b2cff 0%, #ff2d92 100%); }
+    .dsp-card-1, .dsp-card-3, .dsp-card-5, .dsp-card-8{
+      background: linear-gradient(135deg, #2a3a5e 0%, #1c2440 100%);
+      border: 1px solid rgba(122,169,201,.20);
+    }
+    .dsp-card-2, .dsp-card-6, .dsp-card-9{
+      background: linear-gradient(135deg, #3a2e1c 0%, #2a2010 100%);
+      border: 1px solid rgba(255,217,122,.20);
+    }
+    .dsp-card-4, .dsp-card-7{
+      background: linear-gradient(135deg, #ffd97a 0%, #e8b06a 100%);
+      color:#1a0f2e;
+    }
+    .dsp-card-4 .dsp-tag, .dsp-card-7 .dsp-tag{ color: rgba(26,15,46,.75); }
+
+    /* ---- Hero subtitle (mission tagline) ---- */
+    .hero-subtitle{
+      max-width: 880px;
+      margin: 18px auto 0 !important;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 20px !important;
+      line-height: 1.55 !important;
+      font-weight: 500;
+      color: rgba(255,250,245,.82) !important;
+    }
+    .hero-subtitle .accent{
+      color: #ffd97a;
+      background: none;
+      -webkit-text-fill-color: #ffd97a;
+      font-weight: 700;
+    }
+    /* ---- Hero AI badge ---- */
+    .hero-ai-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 auto 10px;
+      padding: 7px 18px;
+      border-radius: 999px;
+      background: rgba(77,232,255,.10);
+      border: 1px solid rgba(77,232,255,.35);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .hero-ai-badge .ai-pulse{
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
+      animation: aiPulse 1.4s ease-in-out infinite;
+    }
+    .hero-scientist-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 auto 14px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255,224,138,.08);
+      border: 1px solid rgba(255,224,138,.25);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      color: var(--gold);
+    }
+    @media (max-width: 600px){
+      .hero-subtitle{ font-size: 15px !important; padding: 0 16px; }
+    }
+
+    /* ---- Mission pillars ---- */
+    .mission-section{
+      max-width: 1200px;
+      margin: 70px auto 0;
+      padding: 0 24px;
+    }
+    .mission-heading{
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .mission-eyebrow{
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .mission-title{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 48px;
+      line-height: 1.1;
+      color: #fff;
+      margin: 0 0 16px;
+      letter-spacing: -.01em;
+    }
+    .mission-title .accent{
+      background: var(--grad-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .mission-sub{
+      max-width: 760px;
+      margin: 0 auto 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,245,230,.78);
+      text-align: center;
+    }
+    .mission-grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .mission-card{
+      position: relative;
+      padding: 28px 22px 26px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 18px 50px rgba(15,10,30,.25), inset 0 1px 0 rgba(255,255,255,.10);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      overflow: hidden;
+    }
+    .mission-card::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 20% 0%, rgba(255,255,255,.10), transparent 55%);
+      pointer-events:none;
+    }
+    .mission-card:hover{
+      transform: translateY(-6px);
+      border-color: rgba(255,224,138,.45);
+      box-shadow: 0 30px 70px rgba(0,0,0,.20);
+    }
+    .mission-icon{
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.15);
+    }
+    .mission-icon svg{ width: 28px; height: 28px; }
+    .mission-icon-1{ background: linear-gradient(135deg, #ffd97a 0%, #e8b06a 100%); color:#1a0f2e; }
+    .mission-icon-2{ background: linear-gradient(135deg, #8aabc6 0%, #6a86a8 100%); }
+    .mission-icon-3{ background: linear-gradient(135deg, #ffd97a 0%, #e8b06a 100%); color:#1a0f2e; }
+    .mission-icon-4{ background: linear-gradient(135deg, #8aabc6 0%, #6a86a8 100%); }
+    .mission-card h3{
+      font-family: 'Inter', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 8px;
+      letter-spacing: -.005em;
+    }
+    .mission-card p{
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: rgba(255,245,230,.78);
+      margin: 0;
+    }
+    .mission-stats{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 36px;
+      margin-top: 40px;
+      padding: 22px 28px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(14px);
+    }
+    .mission-stats .stat{
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .mission-stats .stat .num{
+      display: block;
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 28px;
+      background: var(--grad-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .mission-stats .stat .lbl{
+      display: block;
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .15em;
+      color: rgba(255,245,230,.75);
+      text-transform: uppercase;
+    }
+    @media (max-width: 900px){
+      .mission-grid{ grid-template-columns: repeat(2, 1fr); }
+      .mission-title{ font-size: 36px; }
+      .mission-stats{ border-radius: 24px; gap: 22px; padding: 18px 20px; }
+    }
+    @media (max-width: 520px){
+      .mission-grid{ grid-template-columns: 1fr; }
+      .mission-title{ font-size: 28px; }
+    }
+
+    /* ===== Top Navigation Menu ===== */
+    .topnav{
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: none;
+    }
+    .topnav a{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: rgba(255,245,230,.78);
+      text-decoration: none;
+      background: transparent;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: color .2s ease;
+    }
+    .topnav a:hover,
+    .topnav a:focus,
+    .topnav a:focus-visible,
+    .topnav a:active{
+      color: #ffd97a;
+      background: transparent;
+      transform: none;
+      outline: none;
+      box-shadow: none;
+    }
+    /* Keep AI+AD as the only CTA-style pill */
+    .topnav a.nav-ai{
+      background: #ffd97a;
+      color: #1a0f2e;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.18);
+    }
+    .topnav a.nav-ai:hover,
+    .topnav a.nav-ai:focus,
+    .topnav a.nav-ai:focus-visible,
+    .topnav a.nav-ai:active{
+      background: #ffc85c;
+      color: #1a0f2e;
+      box-shadow: 0 6px 16px rgba(0,0,0,.22);
+    }
+    .topnav a.nav-ai .ai-dot{
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #1a0f2e;
+      box-shadow: 0 0 0 3px rgba(26,15,46,.15);
+      animation: aiPulse 1.6s ease-in-out infinite;
+    }
+    @keyframes aiPulse{
+      0%,100%{ transform: scale(1); opacity: 1; }
+      50%{ transform: scale(1.3); opacity: .6; }
+    }
+    @media (max-width: 900px){
+      .topnav{ display: none; }
+    }
+
+    /* ===== AI+AD section ===== */
+    .aiad-section{
+      position: relative;
+      max-width: 1280px;
+      margin: 90px auto 0;
+      padding: 60px 28px 70px;
+      border-radius: 36px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      box-shadow: none;
+    }
+    .aiad-section::before{
+      content:"";
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,217,122,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,217,122,.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(ellipse at center, #000 35%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, transparent 80%);
+      pointer-events: none;
+    }
+    .aiad-section::after{
+      content:"";
+      position: absolute;
+      width: 420px; height: 420px;
+      right: -120px; top: -120px;
+      background: radial-gradient(circle, rgba(255,224,138,.10) 0%, transparent 70%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+    .aiad-inner{ position: relative; z-index: 2; }
+    .aiad-eyebrow{
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(255,217,122,.08);
+      border: 1px solid rgba(77,232,255,.25);
+      color: var(--cyan);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .aiad-eyebrow .pulse{
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
+      animation: aiPulse 1.4s ease-in-out infinite;
+    }
+    .aiad-title{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 76px;
+      line-height: 1;
+      margin: 0 0 14px;
+      letter-spacing: -.02em;
+      color: #fff;
+    }
+    .aiad-title .ai-grad{
+      color: #ffd97a;
+      background: none;
+      -webkit-text-fill-color: #ffd97a;
+      text-shadow: none;
+    }
+    .aiad-sub{
+      max-width: 780px;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(255,245,230,.80);
+      margin: 0 0 44px;
+    }
+    .aiad-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .aiad-card{
+      position: relative;
+      padding: 24px 22px;
+      border-radius: 22px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      overflow: hidden;
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    .aiad-card::before{
+      content:"";
+      position: absolute;
+      top: -1px; left: -1px; right: -1px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,217,122,.55), transparent);
+      opacity: .8;
+    }
+    .aiad-card:hover{
+      transform: translateY(-6px);
+      border-color: rgba(255,217,122,.45);
+      box-shadow: 0 24px 60px rgba(122,169,201,.18);
+    }
+    .aiad-card .ic{
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, rgba(122,169,201,.18), rgba(122,169,201,.22));
+      border: 1px solid rgba(122,169,201,.30);
+    }
+    .aiad-card .ic svg{ width: 24px; height: 24px; }
+    .aiad-card h3{
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 8px;
+    }
+    .aiad-card .tag{
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(255,224,138,.14);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .aiad-card p{
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255,245,230,.78);
+      margin: 0;
+    }
+    .aiad-tech{
+      margin-top: 38px;
+      padding: 22px 26px;
+      border-radius: 20px;
+      background: rgba(0,0,0,.30);
+      border: 1px solid rgba(122,169,201,.20);
+      display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px;
+      font-family: 'JetBrains Mono','Courier New',monospace;
+    }
+    .aiad-tech .lbl{
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .3em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+    .aiad-tech .chip{
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(122,169,201,.06);
+      border: 1px solid rgba(122,169,201,.20);
+      color: rgba(255,245,230,.92);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      transition: background .25s ease, transform .25s ease;
+    }
+    .aiad-tech .chip:hover{ background: rgba(122,169,201,.18); transform: translateY(-2px); }
+    .aiad-heritage{
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px 32px;
+      padding: 22px 28px;
+      border-radius: 20px;
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,224,138,.14);
+    }
+    .aiad-heritage .heritage-item{
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .aiad-heritage .heritage-item .heritage-num{
+      display: block;
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 30px;
+      background: linear-gradient(135deg, #ffe08a 0%, #ff9a5e 50%, #ff4da6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .aiad-heritage .heritage-item .heritage-lbl{
+      display: block;
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: rgba(255,245,230,.72);
+    }
+    @media (max-width: 991px){
+      .aiad-grid{ grid-template-columns: repeat(2, 1fr); }
+      .aiad-title{ font-size: 56px; }
+    }
+    @media (max-width: 600px){
+      .aiad-section{ padding: 40px 18px 50px; border-radius: 24px; }
+      .aiad-grid{ grid-template-columns: 1fr; }
+      .aiad-title{ font-size: 42px; }
+      .aiad-sub{ font-size: 15px; }
+    }
+
+    /* ===== MMP Attribution Partner Strip ===== */
+    .mmp-strip{
+      max-width: 1200px;
+      margin: 50px auto 0;
+      padding: 28px 30px 32px;
+      border-radius: 28px;
+      background: rgba(122,169,201,.04);
+      border: 1px solid rgba(122,169,201,.12);
+      text-align: center;
+      box-shadow: 0 14px 50px rgba(15,10,30,.20);
+    }
+    .mmp-strip .mmp-eyebrow{
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 16px;
+    }
+    .mmp-strip .mmp-flex{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .mmp-strip .mmp-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .02em;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .mmp-strip .mmp-badge:hover{
+      transform: translateY(-3px);
+      border-color: rgba(122,169,201,.40);
+      box-shadow: 0 10px 30px rgba(122,169,201,.18);
+    }
+    .mmp-strip .mmp-badge .dot{
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+    }
+    .mmp-strip .mmp-note{
+      margin-top: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255,245,230,.65);
+    }
+
+    /* ===== Platforms Showcase (DSP / ADX / AdOps) ===== */
+    .platforms-section{
+      max-width: 1280px;
+      margin: 80px auto 0;
+      padding: 0 24px;
+    }
+    .platforms-heading{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .platforms-eyebrow{
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .platforms-title{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 52px;
+      line-height: 1.05;
+      color: #fff;
+      margin: 0 0 12px;
+      letter-spacing: -.01em;
+    }
+    .platforms-title .accent{
+      background: var(--grad-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .platforms-sub{
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,245,230,.75);
+    }
+    .platforms-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .platform-card{
+      position: relative;
+      padding: 36px 28px 32px;
+      border-radius: 26px;
+      background: linear-gradient(165deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      overflow: hidden;
+      transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+    }
+    .platform-card::before{
+      content:"";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(255,217,122,.55), transparent);
+      opacity: .85;
+    }
+    .platform-card::after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 20% 0%, rgba(255,255,255,.08), transparent 55%);
+      pointer-events:none;
+    }
+    .platform-card:hover{
+      transform: translateY(-8px);
+      border-color: rgba(255,224,138,.35);
+      box-shadow: 0 30px 70px rgba(0,0,0,.15);
+    }
+    .platform-card .plat-icon{
+      width: 58px; height: 58px;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 32px rgba(0,0,0,.25);
+    }
+    .platform-card .plat-icon svg{ width: 30px; height: 30px; }
+    .plat-dsp{ background: linear-gradient(135deg, #ffd97a 0%, #e8b06a 100%); color:#1a0f2e; }
+    .plat-adx{ background: linear-gradient(135deg, #8aabc6 0%, #6a86a8 100%); }
+    .plat-ops{ background: linear-gradient(135deg, #ffd97a 0%, #e8b06a 100%); color:#1a0f2e; }
+    .platform-card .plat-label{
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255,224,138,.12);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+    .platform-card h3{
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px;
+      letter-spacing: -.01em;
+    }
+    .platform-card p{
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,245,230,.76);
+      margin: 0 0 18px;
+    }
+    .platform-card .plat-features{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .platform-card .plat-features li{
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255,245,230,.82);
+    }
+    .platform-card .plat-features li::before{
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+    @media (max-width: 991px){
+      .platforms-grid{ grid-template-columns: 1fr; }
+      .platforms-title{ font-size: 38px; }
+    }
+
+    /* ===== Core Strengths (Efficiency / Data / Coverage) ===== */
+    .strengths-section{
+      max-width: 1280px;
+      margin: 90px auto 0;
+      padding: 0 24px;
+    }
+    .strengths-heading{
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .strengths-eyebrow{
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .strengths-title{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 52px;
+      line-height: 1.05;
+      color: #fff;
+      margin: 0 0 12px;
+      letter-spacing: -.01em;
+    }
+    .strengths-title .accent{
+      background: var(--grad-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .strengths-sub{
+      max-width: 680px;
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,245,230,.75);
+    }
+    .strengths-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .strength-card{
+      position: relative;
+      padding: 38px 30px 34px;
+      border-radius: 28px;
+      text-align: center;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 60px rgba(15,10,30,.25);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .strength-card::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 50% 0%, rgba(255,255,255,.12), transparent 60%);
+      pointer-events:none;
+    }
+    .strength-card:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 32px 80px rgba(0,0,0,.20);
+    }
+    .strength-card .str-num{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 64px;
+      line-height: 1;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .strength-card .str-label{
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .strength-card h3{
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .strength-card p{
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,245,230,.78);
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .str-efficiency{
+      background: linear-gradient(160deg, rgba(255,217,122,.10), rgba(255,217,122,.04));
+      border-top: 3px solid #ffd97a;
+    }
+    .str-efficiency .str-num{ color: #ffd97a; }
+    .str-efficiency .str-label{ color: rgba(255,217,122,.85); }
+    .str-data{
+      background: linear-gradient(160deg, rgba(122,169,201,.10), rgba(122,169,201,.04));
+      border-top: 3px solid #7aa9c9;
+    }
+    .str-data .str-num{ color: #7aa9c9; }
+    .str-data .str-label{ color: rgba(122,169,201,.85); }
+    .str-coverage{
+      background: linear-gradient(160deg, rgba(255,217,122,.08), rgba(122,169,201,.06));
+      border-top: 3px solid rgba(255,255,255,.35);
+    }
+    .str-coverage .str-num{ color: #f0eef5; }
+    .str-coverage .str-label{ color: rgba(255,250,242,.75); }
+    @media (max-width: 991px){
+      .strengths-grid{ grid-template-columns: 1fr; }
+      .strengths-title{ font-size: 38px; }
+    }
+
+    /* ===== Language Dropdown ===== */
+    .lang-dropdown{
+      position: relative;
+      display: inline-block;
+    }
+    .lang-dropdown select{
+      appearance: none;
+      -webkit-appearance: none;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      padding: 8px 32px 8px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,245,230,.9);
+      cursor: pointer;
+      outline: none;
+      transition: background .25s ease, border-color .25s ease;
+    }
+    .lang-dropdown select:hover{
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,.35);
+    }
+    .lang-dropdown select option{
+      background: #13063b;
+      color: #fff;
+      font-size: 13px;
+    }
+    .lang-dropdown::after{
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0; height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid rgba(255,245,230,.7);
+      pointer-events: none;
+    }
+
+    /* ---- Ecosystem showcase grid (illustrations) ---- */
+    .ecosystem-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .ecosystem-card{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 28px;
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 20px 50px rgba(15,10,30,.30);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .ecosystem-card:hover{
+      transform: translateY(-6px);
+      border-color: rgba(255,224,138,.40);
+      box-shadow: 0 30px 70px rgba(0,0,0,.20);
+    }
+    .ecosystem-card-img{
+      width: 100%;
+      aspect-ratio: 8 / 5;
+      background: linear-gradient(135deg, rgba(255,217,122,.08), rgba(255,217,122,.08));
+      display: block;
+    }
+    .ecosystem-card-text{
+      padding: 24px 28px 28px;
+    }
+    .ecosystem-card-text .heading3{
+      color:#fff !important;
+      margin: 0 0 8px !important;
+    }
+    .ecosystem-card-text .main-paragraph{
+      color: rgba(255,245,230,.82) !important;
+      margin: 0 !important;
+    }
+    @media (max-width: 768px){
+      .ecosystem-grid{ grid-template-columns: 1fr; gap: 20px; }
+    }
 
     /* Hero variant: smaller cards inline under the headline */
     .hero-dsp-wrap{
@@ -290,80 +1203,153 @@
     }
     .hero-dsp-flex{
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      flex-wrap: nowrap;
+      gap: 8px;
       justify-content: center;
+      align-items: stretch;
     }
     .hero-dsp-flex .dsp-partner-card{
-      flex: 0 1 170px;
-      min-width: 150px;
-      max-width: 200px;
-      padding: 18px 14px;
-      font-size: 22px;
-      border-radius: 18px;
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 140px;
+      padding: 12px 8px;
+      font-size: 16px;
+      border-radius: 14px;
     }
-    .hero-dsp-flex .dsp-partner-card .dsp-tag{
-      font-size: 10px;
-      letter-spacing: .2em;
-      margin-top: 6px;
+    .hero-dsp-flex .dsp-partner-card .dsp-name{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (max-width: 900px){
+      .hero-dsp-flex{ flex-wrap: wrap; gap: 10px; }
+      .hero-dsp-flex .dsp-partner-card{
+        flex: 1 1 110px;
+        max-width: 160px;
+        font-size: 17px;
+        padding: 14px 10px;
+      }
     }
     @media (max-width: 600px){
       .hero-dsp-flex .dsp-partner-card{
-        flex: 1 1 130px;
-        font-size: 18px;
-        padding: 14px 10px;
+        flex: 1 1 100px;
+        font-size: 15px;
+        padding: 10px 6px;
       }
       .hero-dsp-title{ font-size: 11px; letter-spacing: .25em; }
     }
-    .main-paragraph{ color: rgba(255,245,230,.92) !important; }
+    .main-paragraph{ color: rgba(245,242,250,.82) !important; }
     .main-paragraph.center.leftdesktop{
-      font-size: 64px !important;
-      line-height: 1.05 !important;
-      font-weight: 800 !important;
-      letter-spacing: -.02em !important;
+      font-size: 60px !important;
+      line-height: 1.1 !important;
+      font-weight: 700 !important;
+      letter-spacing: -.015em !important;
       color: #fff !important;
-      text-shadow: 0 4px 40px rgba(123,44,255,.45);
+      text-shadow: none;
     }
     .text-span-2{
-      background: var(--grad-accent);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent !important;
+      color: #ffd97a !important;
+      background: none !important;
+      -webkit-text-fill-color: #ffd97a !important;
       font-family: 'Anton','Oswald',sans-serif !important;
       letter-spacing: .01em !important;
-      filter: drop-shadow(0 6px 30px rgba(255,45,146,.55));
-      animation: shimmer 6s ease-in-out infinite;
+      filter: none;
+      animation: none;
     }
     @keyframes shimmer{
-      0%,100%{ filter: drop-shadow(0 6px 30px rgba(255,45,146,.55)); }
-      50%   { filter: drop-shadow(0 6px 40px rgba(34,225,255,.65)); }
+      0%,100%{ filter: none; }
+      50%   { filter: none; }
     }
 
     /* ---- About / logo-block (long intro paragraphs) ---- */
     .logo-block{
       max-width: 1100px;
-      margin: 60px auto !important;
-      padding: 48px 28px !important;
-      background: linear-gradient(145deg, rgba(255,45,146,.10), rgba(34,225,255,.08));
-      border: 1px solid var(--glass-border);
-      border-radius: 28px;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 20px 60px rgba(11,5,36,.5), inset 0 1px 0 rgba(255,255,255,.08);
+      margin: 72px auto !important;
+      padding: 52px 32px !important;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.20);
     }
     .logo-block p{
-      color: rgba(255,245,230,.88) !important;
+      color: rgba(245,242,250,.82) !important;
+      line-height: 1.75 !important;
     }
     .logo-block p:first-child{
-      font-size: 28px !important;
-      font-weight: 800 !important;
-      letter-spacing: .12em;
-      background: var(--grad-accent);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 18px !important;
+      font-size: 24px !important;
+      font-weight: 700 !important;
+      letter-spacing: .14em;
+      color: #ffd97a !important;
+      background: none !important;
+      -webkit-text-fill-color: #ffd97a !important;
+      margin-bottom: 22px !important;
+    }
+
+    /* ---- About: four core capability pillars ---- */
+    .about-pillars{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 36px 40px 8px;
+    }
+    .pillar-card{
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 24px 20px;
+      transition: all .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar-card::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,217,122,.06), rgba(255,217,122,.04));
+      opacity: 0;
+      transition: opacity .25s ease;
+      pointer-events: none;
+    }
+    .pillar-card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(255,224,138,.35);
+      box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    }
+    .pillar-card:hover::before{ opacity: 1; }
+    .pillar-icon{
+      width: 40px; height: 40px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0,0,0,.15), rgba(77,232,255,.12));
+      border: 1px solid rgba(255,224,138,.25);
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .pillar-icon svg{ width: 20px; height: 20px; }
+    .pillar-card h4{
+      color: #fff !important;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: .01em;
+      font-family: Arial, sans-serif;
+    }
+    .pillar-card p{
+      color: rgba(255,245,230,.72) !important;
+      font-size: 0.85rem !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-family: Arial, sans-serif !important;
+    }
+    @media (max-width: 980px){
+      .about-pillars{ grid-template-columns: repeat(2, 1fr); margin: 28px 28px 8px; }
+    }
+    @media (max-width: 540px){
+      .about-pillars{ grid-template-columns: 1fr; margin: 24px 18px 8px; gap: 14px; }
+      .pillar-card{ padding: 20px 18px; }
     }
 
     /* ---- Headings ---- */
@@ -372,28 +1358,27 @@
       letter-spacing: -.01em;
     }
     .heading2{
-      font-weight: 800 !important;
-      text-shadow: 0 4px 30px rgba(123,44,255,.35);
+      font-weight: 700 !important;
+      text-shadow: none;
     }
     .spectext{
-      background: linear-gradient(135deg, #fff 0%, #ffd166 50%, #ff5ec4 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #ffd97a !important;
+      background: none !important;
+      -webkit-text-fill-color: #ffd97a !important;
     }
 
-    /* ---- Banner sections (greenbg becomes vibrant) ---- */
+    /* ---- Banner sections (greenbg) ---- */
     .bannersection.greenbg, .mybannersection{
-      background: linear-gradient(125deg, #ff2d92 0%, #7b2cff 55%, #22e1ff 100%) !important;
-      border-radius: 32px;
+      background: linear-gradient(135deg, #1c2440 0%, #2a2050 100%) !important;
+      border-radius: 24px;
       margin-left: 24px; margin-right: 24px;
-      box-shadow: 0 25px 70px rgba(255,45,146,.35), 0 0 0 1px rgba(255,255,255,.12) inset;
+      box-shadow: 0 20px 50px rgba(0,0,0,.30), inset 0 0 0 1px rgba(255,217,122,.15);
       overflow: hidden;
     }
     .bannersection.greenbg::before{
       content:"";
       position:absolute; inset:0;
-      background: radial-gradient(ellipse at 80% 20%, rgba(255,255,255,.25), transparent 60%);
+      background: radial-gradient(ellipse at 80% 20%, rgba(255,217,122,.10), transparent 60%);
       pointer-events:none;
     }
     .bannersection.greenbg .heading2{
@@ -413,14 +1398,14 @@
       letter-spacing: .04em;
     }
     .texttag.white{
-      background: rgba(11,5,36,0.35) !important;
+      background: rgba(15,10,30,0.25) !important;
       color: #fff !important;
       border-color: rgba(255,255,255,.25) !important;
     }
 
     /* ---- Logo / brand strip ---- */
     .square-logo{
-      filter: brightness(0) invert(1) drop-shadow(0 4px 18px rgba(34,225,255,.35));
+      filter: brightness(0) invert(1) drop-shadow(0 4px 18px rgba(122,169,201,.30));
       opacity: .85;
       transition: transform .3s ease, opacity .3s ease;
     }
@@ -433,14 +1418,14 @@
       backdrop-filter: blur(16px) saturate(140%);
       -webkit-backdrop-filter: blur(16px) saturate(140%);
       border-radius: 24px !important;
-      box-shadow: 0 18px 50px rgba(11,5,36,.45), inset 0 1px 0 rgba(255,255,255,.08) !important;
+      box-shadow: 0 18px 50px rgba(15,10,30,.30), inset 0 1px 0 rgba(255,255,255,.08) !important;
       transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
       color: #fff !important;
     }
     .keycard:hover, .textcard:hover, .numbercard:hover, .reviewcard:hover{
       transform: translateY(-6px);
-      border-color: rgba(255,209,102,.55) !important;
-      box-shadow: 0 28px 70px rgba(255,45,146,.30), inset 0 1px 0 rgba(255,255,255,.18) !important;
+      border-color: rgba(255,224,138,.40) !important;
+      box-shadow: 0 28px 70px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.18) !important;
     }
     .keycard .heading3, .textcard .heading3, .numbercard .heading2, .reviewcard .heading3{
       color:#fff !important;
@@ -450,31 +1435,31 @@
     }
     .heading2.black, .main-paragraph.black{ color:#0b0524 !important; }
 
-    /* Coloured card variants — re-themed */
+    /* Coloured card variants — unified to 2-tone */
     .textcard.pink, .numbercard.pink{
-      background: linear-gradient(140deg, #ffd166 0%, #ff5ec4 100%) !important;
-      border-color: rgba(255,255,255,.4) !important;
+      background: linear-gradient(140deg, #ffd97a 0%, #e8b06a 100%) !important;
+      border-color: rgba(255,255,255,.30) !important;
     }
     .textcard.green{
-      background: linear-gradient(140deg, #22e1ff 0%, #7b2cff 100%) !important;
-      border-color: rgba(255,255,255,.35) !important;
+      background: linear-gradient(140deg, #8aabc6 0%, #6a86a8 100%) !important;
+      border-color: rgba(255,255,255,.25) !important;
     }
     .textcard.violet, .numbercard.violet{
-      background: linear-gradient(140deg, #7b2cff 0%, #ff2d92 100%) !important;
-      border-color: rgba(255,255,255,.35) !important;
+      background: linear-gradient(140deg, #2a3a5e 0%, #1c2440 100%) !important;
+      border-color: rgba(122,169,201,.25) !important;
     }
     .numbercard.green{
-      background: linear-gradient(140deg, #00d4a4 0%, #22e1ff 100%) !important;
-      border-color: rgba(255,255,255,.35) !important;
+      background: linear-gradient(140deg, #8aabc6 0%, #6a86a8 100%) !important;
+      border-color: rgba(255,255,255,.25) !important;
     }
     .numbercard.puprle{
-      background: linear-gradient(140deg, #ff8a3d 0%, #ff2d92 100%) !important;
-      border-color: rgba(255,255,255,.4) !important;
+      background: linear-gradient(140deg, #ffd97a 0%, #e8b06a 100%) !important;
+      border-color: rgba(255,255,255,.30) !important;
     }
 
     /* Card icons */
     .iconcard{
-      filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,209,102,.7));
+      filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,224,138,.5));
     }
 
     /* Number card big numbers shine */
@@ -486,21 +1471,22 @@
 
     /* ---- Buttons ---- */
     .outlinebtn, .learnbtn, .w-button{
-      background: var(--grad-accent) !important;
-      color: #1a0033 !important;
+      background: #ffd97a !important;
+      color: #1a0f2e !important;
       border: none !important;
       border-radius: 999px !important;
       padding: 14px 28px !important;
-      font-weight: 800 !important;
-      letter-spacing: .08em !important;
-      box-shadow: 0 12px 32px rgba(255,45,146,.4), inset 0 0 0 1px rgba(255,255,255,.35) !important;
-      transition: transform .25s ease, box-shadow .25s ease !important;
+      font-weight: 700 !important;
+      letter-spacing: .06em !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,.18) !important;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease !important;
     }
     .outlinebtn:hover, .learnbtn:hover, .w-button:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 18px 44px rgba(34,225,255,.45), inset 0 0 0 1px rgba(255,255,255,.55) !important;
+      background: #ffc85c !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.22) !important;
     }
-    .learnbtn .btntext{ color:#1a0033 !important; }
+    .learnbtn .btntext{ color:#1a0f2e !important; }
 
     /* ---- Form ---- */
     .form-block{
@@ -510,10 +1496,10 @@
       padding: 32px !important;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 25px 60px rgba(11,5,36,.5);
+      box-shadow: 0 25px 60px rgba(15,10,30,.35);
     }
     .inputfield, .inputfield.w-input{
-      background: rgba(11,5,36,0.55) !important;
+      background: rgba(15,10,30,0.45) !important;
       border: 1px solid rgba(255,255,255,0.18) !important;
       color:#fff !important;
       border-radius: 14px !important;
@@ -523,7 +1509,7 @@
     .inputfield::placeholder{ color: rgba(255,245,230,.55) !important; }
     .inputfield:focus{
       border-color: var(--gold) !important;
-      box-shadow: 0 0 0 4px rgba(255,209,102,.18) !important;
+      box-shadow: 0 0 0 4px rgba(255,224,138,.14) !important;
       outline: none !important;
     }
     .checkbox-label{ color: rgba(255,245,230,.8) !important; }
@@ -531,57 +1517,133 @@
 
     /* Equal half banner side text */
     .equalhalfbanner .imageequalhalf{
-      background: linear-gradient(135deg, rgba(255,45,146,.18), rgba(34,225,255,.18));
-      border: 1px solid var(--glass-border);
-      border-radius: 28px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
       padding: 40px;
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(10px);
     }
 
-    /* ---- Footer / Privacy block redesign ---- */
+    /* ---- Industry-standard ad-tech footer ---- */
     .footersection{
       margin-top: 80px !important;
-      padding: 60px 24px !important;
-      background: linear-gradient(180deg, transparent 0%, rgba(7,2,23,0.85) 100%);
+      padding: 0 !important;
+      background: linear-gradient(180deg, transparent 0%, rgba(10,7,22,0.85) 40%, rgba(10,7,22,0.95) 100%);
       border-top: 1px solid rgba(255,255,255,.08);
     }
-    .footersection > .footerinfo > div{ color: var(--cream) !important; }
-    .footersection h1{
-      color:#fff !important;
-      background: var(--grad-accent);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .site-footer{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 32px 0;
     }
-    .footersection [style*="background:#fff"]{
-      background: rgba(255,255,255,0.05) !important;
-      border: 1px solid var(--glass-border) !important;
-      color: var(--cream) !important;
-      backdrop-filter: blur(12px);
+    .footer-grid{
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
     }
-    .footersection [style*="background:#fff"] *{ color: var(--cream) !important; }
-    .footersection [style*="background:#fff"] strong{ color:#fff !important; }
-    .footersection [style*="background:#fff"] a{ color: var(--gold) !important; }
-    .footersection .footerlinks p,
-    .footersection .footerlinks .main-paragraph,
-    .footersection .footerlinks .legal-note{
-      color: rgba(255,245,230,.75) !important;
+    .footer-brand .footer-logo{
+      height: 32px; width:auto; margin-bottom: 16px; display:block;
     }
-    .footersection .footerlinks a{ color: var(--gold) !important; }
-    .footersection [style*="color:#0a293b"], 
-    .footersection [style*="color:#4a627a"],
-    .footersection [style*="color:#5b6e8c"],
-    .footersection [style*="color:#7e8c9e"]{ color: rgba(255,245,230,.7) !important; }
-    .footersection [style*="border-bottom:1px solid #dce4ec"],
-    .footersection [style*="border-top:1px solid #dce4ec"]{ border-color: rgba(255,255,255,.12) !important; }
+    .footer-brand p{
+      color: rgba(255,245,230,.65);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin: 0 0 18px;
+      max-width: 280px;
+    }
+    .footer-social{ display:flex; gap:10px; margin-top: 8px; }
+    .footer-social a{
+      width:32px; height:32px;
+      display:inline-flex; align-items:center; justify-content:center;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.12);
+      color: rgba(255,245,230,.75);
+      text-decoration:none;
+      font-size: 0.75rem;
+      transition: all .2s ease;
+    }
+    .footer-social a:hover{
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-1px);
+    }
+    .footer-col h4{
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+    .footer-col ul{ list-style:none; padding:0; margin:0; }
+    .footer-col li{ margin-bottom: 10px; }
+    .footer-col a{
+      color: rgba(255,245,230,.7);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color .15s ease;
+    }
+    .footer-col a:hover{ color: var(--gold); }
+    .footer-bottom{
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 24px 0 32px;
+      display:flex;
+      flex-wrap: wrap;
+      align-items:center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .footer-copy{
+      color: rgba(255,245,230,.55);
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    .footer-legal{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 20px;
+      align-items:center;
+    }
+    .footer-legal a{
+      color: rgba(255,245,230,.6);
+      text-decoration:none;
+      font-size: 0.8rem;
+      transition: color .15s ease;
+    }
+    .footer-legal a:hover{ color: var(--gold); }
+    .footer-compliance{
+      display:flex; gap:10px; align-items:center;
+      flex-wrap: wrap;
+    }
+    .compliance-badge{
+      display:inline-flex;
+      align-items:center;
+      padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 4px;
+      color: rgba(255,245,230,.7);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 900px){
+      .footer-grid{ grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand{ grid-column: 1 / -1; }
+    }
+    @media (max-width: 540px){
+      .site-footer{ padding: 48px 20px 0; }
+      .footer-grid{ grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
+      .footer-bottom{ flex-direction: column; align-items: flex-start; padding: 20px 0 28px; }
+    }
 
     /* About-us paragraphs (inline white text already) — boost readability */
     .logo-block p[style*="color: white"]{ color: rgba(255,245,230,.92) !important; }
 
     /* Popup */
-    .popupwrap{ background: rgba(7,2,23,.75) !important; backdrop-filter: blur(8px); }
+    .popupwrap{ background: rgba(15,10,30,.60) !important; backdrop-filter: blur(8px); }
     .popup .textlistwrap.equalhalf.pop{
-      background: linear-gradient(145deg, rgba(255,45,146,.12), rgba(34,225,255,.10));
+      background: linear-gradient(145deg, rgba(255,217,122,.08), rgba(255,217,122,.08));
       border: 1px solid var(--glass-border);
       border-radius: 28px;
     }
@@ -601,21 +1663,101 @@
       .numbercard .heading2{ font-size: 44px !important; }
       .logo-block{ padding: 28px 18px !important; }
     }
+
+    /* ===== Comprehensive Mobile Overrides ===== */
+    @media (max-width: 768px){
+      /* Hero badges */
+      .hero-ai-badge, .hero-scientist-badge{
+        font-size: 10px !important;
+        padding: 5px 12px !important;
+        letter-spacing: .15em !important;
+      }
+      /* About paragraphs */
+      .aboutus p[style*="padding: 0 40px"],
+      div > p[style*="padding: 0 40px"]{
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+      }
+      /* Mission stats pill */
+      .mission-stats{
+        border-radius: 24px !important;
+        gap: 18px 24px !important;
+        padding: 18px 20px !important;
+      }
+      .mission-stats .stat .num{ font-size: 22px !important; }
+      /* MMP strip */
+      .mmp-strip{ padding: 22px 18px !important; margin-top: 36px !important; }
+      .mmp-strip .mmp-badge{ font-size: 12px !important; padding: 8px 14px !important; }
+      /* AI heritage */
+      .aiad-heritage{ gap: 14px 20px !important; padding: 18px 16px !important; }
+      .aiad-heritage .heritage-item .heritage-num{ font-size: 24px !important; }
+      /* Hero ADX partner cards */
+      .hero-dsp-flex{ gap: 6px !important; }
+      .hero-dsp-flex .dsp-partner-card{
+        max-width: none !important;
+        flex: 1 1 30% !important;
+        font-size: 13px !important;
+        padding: 10px 6px !important;
+        border-radius: 12px !important;
+      }
+      .hero-dsp-title{ font-size: 10px !important; letter-spacing: .2em !important; }
+      /* Lang dropdown hide on very small screens */
+      .lang-dropdown{ display: none !important; }
+    }
+    @media (max-width: 480px){
+      .heroscreen{ padding-top: 12px !important; }
+      .main-paragraph.center.leftdesktop{ font-size: 28px !important; }
+      .text-span-2{ font-size: 52px !important; }
+      .hero-subtitle{ font-size: 14px !important; }
+      .mission-title{ font-size: 32px !important; }
+      .platforms-title{ font-size: 30px !important; }
+      .strengths-title{ font-size: 30px !important; }
+      .aiad-title{ font-size: 36px !important; }
+      .aiad-sub{ font-size: 14px !important; }
+      .hero-dsp-flex .dsp-partner-card{
+        flex: 1 1 28% !important;
+        font-size: 11px !important;
+      }
+      .cs-hero h1{ font-size: 36px !important; }
+    }
   </style>
   <!-- ===== END VIBRANT REDESIGN OVERRIDE ===== -->
 </head>
 
 <body class="body">
   <section id="top" data-w-id="d8348b62-9688-1fc5-307c-4b75655f5d60" class="header"><a href=""
-      aria-current="page" class="logolinks w-inline-block w--current"><img src="images/frame-202131330264.png"
-        loading="lazy" width="120" height="Auto" alt="BorderlessAd logo" class="logoheader" /></a>
+      aria-current="page" class="logolinks w-inline-block w--current"><img src="images/logo-borderlessad.svg"
+        loading="lazy" width="180" height="Auto" alt="BorderlessAd logo" class="logoheader" /></a>
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
       role="banner" class="navbar w-nav">
       <div class="headernav w-container">
         <div class="menu-button w-nav-button">
           <div class="w-icon-nav-menu"></div>
         </div>
-
+        <nav class="topnav">
+          <a href="#top">Home</a>
+          <a href="#mission">Mission</a>
+          <a href="#ai-plus-ad" class="nav-ai"><span class="ai-dot"></span>AI+AD</a>
+          <a href="#platforms">Platforms</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="lang-dropdown">
+          <select onchange="if(this.value) window.location.href=this.value;">
+            <option value="" selected>English</option>
+            <option value="#zh">Chinese</option>
+            <option value="#es">Spanish</option>
+            <option value="#fr">French</option>
+            <option value="#de">German</option>
+            <option value="#ja">Japanese</option>
+            <option value="#ko">Korean</option>
+            <option value="#pt">Portuguese</option>
+            <option value="#ru">Russian</option>
+            <option value="#ar">Arabic</option>
+            <option value="#it">Italian</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="w-layout-hflex rightbtns">
@@ -636,7 +1778,7 @@
           </div>
           <nav role="navigation" class="nav-menu w-nav-menu">
             <a href="" aria-current="page" class="logolinks open w-inline-block w--current"><img
-                src="images/frame-202131330264.png" loading="lazy" width="120" height="Auto" alt="BorderlessAd logo"
+                src="images/logo-borderlessad.svg" loading="lazy" width="180" height="Auto" alt="BorderlessAd logo"
                 class="logoheader" /></a>
  
             <a data-w-id="d8348b62-9688-1fc5-307c-4b75655f5d90" href="#"
@@ -648,35 +1790,44 @@
   </section>
   <section class="heroscreen innerpadding margintop">
     <div class="w-layout-vflex herotext">
+      <div class="hero-ai-badge"><span class="ai-pulse"></span>AI + AD · Intelligent Advertising &amp; Media</div>
+      <div class="hero-scientist-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3 6l-1 5H9l-1-5c-1.5-1.5-3-3.5-3-6a7 7 0 0 1 7-7z"/><line x1="9" y1="19" x2="15" y2="19"/></svg> Powered by dozens of top-tier AI scientists</div>
       <h1 class="main-paragraph center leftdesktop">Scale your mobile growth with<br /><span
           class="text-span-2" style="font-size:160px;" >BorderlessAd</span></h1>
+      <p class="hero-subtitle">
+        An <span class="accent">AI-powered advertising platform</span> delivering
+        <span class="accent">global CPI / CPA / CPS campaigns</span> through <span class="accent">AI-powered media and worldwide traffic</span> — on iOS, Android, and CTV. One-stop delivery to millions of users worldwide. Full attribution coverage: <span class="accent">CTA, VTA, and multi-touch</span>.
+      </p>
     </div>
     <div class="hero-dsp-wrap">
-      <div class="hero-dsp-title">Trusted DSP Partners</div>
+      <div class="hero-dsp-title">Trusted ADX Partners</div>
       <div class="hero-dsp-flex">
         <div class="dsp-partner-card dsp-card-1">
           <span class="dsp-name">Unity</span>
-          <span class="dsp-tag">DSP PARTNER</span>
         </div>
         <div class="dsp-partner-card dsp-card-2">
           <span class="dsp-name">Liftoff</span>
-          <span class="dsp-tag">DSP PARTNER</span>
         </div>
         <div class="dsp-partner-card dsp-card-3">
           <span class="dsp-name">Verve</span>
-          <span class="dsp-tag">DSP PARTNER</span>
         </div>
         <div class="dsp-partner-card dsp-card-4">
           <span class="dsp-name">Mintegral</span>
-          <span class="dsp-tag">DSP PARTNER</span>
         </div>
         <div class="dsp-partner-card dsp-card-5">
           <span class="dsp-name">Liftofflowctr</span>
-          <span class="dsp-tag">DSP PARTNER</span>
         </div>
         <div class="dsp-partner-card dsp-card-6">
           <span class="dsp-name">Bizzclick</span>
-          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-7">
+          <span class="dsp-name">OpenX</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-8">
+          <span class="dsp-name">ironSource</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-9">
+          <span class="dsp-name">AdColony</span>
         </div>
       </div>
     </div>
@@ -747,17 +1898,49 @@
     <div>
         <p style="padding: 0 40px; color: white; font-size: 24px; line-height: 1.6; font-family: Arial, sans-serif;">ABOUT US:</p>
      <p style="padding: 0 40px; color: white; font-size: 18px; line-height: 1.6; font-family: Arial, sans-serif;">
-BorderlessAd is a leading mobile advertising technology company focused on user acquisition and retargeting. Founded in Hong Kong in 2020 by a team of seasoned marketing specialists, we have built a powerful digital ad platform to elevate performance for mobile applications across the globe.
+BorderlessAd is a global <strong>AI advertising and media technology company</strong> built on over a decade of algorithm research and artificial intelligence. We unite four core capabilities under one platform &mdash; <strong>worldwide ad delivery</strong>, <strong>premium global media inventory</strong>, <strong>true cross-platform reach</strong>, and a proprietary <strong>AI &times; Ad engine</strong> that fuses deep learning with programmatic advertising. Our team of dozens of top-tier AI scientists and algorithm engineers has spent years engineering deep-learning breakthroughs purpose-built for the advertising industry. Founded in Hong Kong in 2020, we operate across every major region, helping mobile apps, brands, and performance advertisers grow without borders &mdash; reaching the right audience on every device, every screen, and every market.
      </p>
            <p style="padding: 0 40px; color: white; font-size: 18px; line-height: 1.6; font-family: Arial, sans-serif;">
-       Drawing on our in-depth expertise in ad tech, we provide end-to-end solutions covering campaign deployment, ongoing optimization and business scaling. We partner with advertisers, media buyers, app developers and brands of all sizes, simplifying day-to-day ad operations. This allows our clients to prioritize strategic growth and free themselves from the hassle of traffic procurement and publisher liaison.
+       Drawing on deep ad-tech expertise, we provide end-to-end solutions spanning campaign deployment, real-time optimization, and business scaling. We cover <strong>CPI, CPA, and CPS</strong> advertising models, partnering with advertisers, media buyers, app developers, and brands of all sizes to simplify daily operations and unlock strategic growth &mdash; free from the constraints of traditional traffic procurement.
       <p>
                 <p style="padding: 0 40px; color: white; font-size: 18px; line-height: 1.6; font-family: Arial, sans-serif;">
-          We are an online advertising tech firm dedicated to helping advertisers meet performance and branding objectives in mobile affiliate marketing. Supported by our self-owned ADX, SSP and DSP systems, as well as API-connected global developer affiliate platforms, we are capable of delivering high conversion rates and low fraud traffic on both Android and iOS devices. We have accumulated abundant experience in betting, casino and gaming verticals, with over 100 successful cooperation cases, more than 150 traffic sources and 900 partnered advertisers.
+          We are an online advertising tech firm dedicated to helping advertisers meet performance and branding objectives in mobile affiliate marketing. Supported by our self-owned <strong>ADX, SSP, and DSP</strong> stack, plus API-connected global developer affiliate platforms, we deliver high conversion rates and low-fraud traffic on Android, iOS, and <strong>CTV</strong> worldwide. Our platform automatically integrates with leading attribution partners &mdash; <strong>AppsFlyer, Adjust, Branch, Kochava, Singular</strong> &mdash; supporting <strong>CTA (Click-Through), VTA (View-Through), and multi-touch</strong> attribution models for precise tracking and analytics across every campaign. We have served 100+ successful cases across betting, casino, and gaming verticals, with 150+ traffic sources and 900+ partnered advertisers.
         </p>
              <p style="padding: 0 40px; color: white; font-size: 18px; line-height: 1.6; font-family: Arial, sans-serif;">
-        Once we obtain your campaign links, we will prioritize your offers via EPC and RTB access to acquire high-quality traffic in bulk. We also conduct real-time traffic optimization based on data feedback. Besides, our in-house anti-fraud system can precisely detect invalid and fraudulent traffic. Its detection results are 60% consistent with Mfilterit and 70% consistent with P360. Given that our cooperative clients attach great importance to fraud prevention, we guarantee to block abnormal traffic at the source.
+        Once we obtain your campaign links, we will prioritize your offers via EPC and RTB access to acquire high-quality traffic in bulk. We also conduct real-time traffic optimization based on data feedback. In addition, our in-house anti-fraud system can precisely detect invalid and fraudulent traffic. Our detection results show 60% consistency with Mfilterit and 70% with P360. Given that our partners place great importance on fraud prevention, we guarantee to block abnormal traffic at the source.
     </p>
+
+    <!-- Four core capabilities -->
+    <div class="about-pillars">
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+        </div>
+        <h4>Global Ad Delivery</h4>
+        <p>Worldwide campaign reach across 100+ markets &mdash; from North America and Europe to LATAM, MENA, and APAC.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h4M7 13h10M7 17h7"/></svg>
+        </div>
+        <h4>Global Media Resources</h4>
+        <p>Premium inventory through self-owned ADX, SSP, and DSP, plus 150+ direct traffic sources and 900+ partner advertisers.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="10" rx="1.5"/><rect x="9" y="10" width="12" height="10" rx="1.5"/><path d="M3 18h6"/></svg>
+        </div>
+        <h4>Cross-Platform Delivery</h4>
+        <p>Unified campaigns across iOS, Android, web, in-app, and CTV &mdash; one platform, every screen, consistent measurement.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h4>AI &times; Ad Engine</h4>
+        <p>Proprietary deep-learning models powering creative generation, bidding, audience targeting, and real-time optimization.</p>
+      </div>
+    </div>
     </div>
   </div>
     
@@ -802,6 +1985,253 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
       <img src="images/frame-2131329995.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
     </div>
   </section>
+  <section id="mission" class="mission-section">
+    <div class="mission-heading">
+      <div class="mission-eyebrow">Our Mission</div>
+      <h2 class="mission-title">Powering <span class="accent">borderless AI advertising &amp; media</span> for global growth</h2>
+      <p class="mission-sub">We fuse artificial intelligence with advertising technology to help mobile apps and brands reach the right users in every market — with an AI-powered cross-platform delivery engine, intelligent media buying, and algorithmic campaign management.</p>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-icon mission-icon-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+        </div>
+        <h3>Mobile-First Advertising</h3>
+        <p>Built for app install, retargeting and in-app engagement across iOS &amp; Android with precise tracking.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon mission-icon-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="10" rx="2"/><rect x="10" y="10" width="12" height="9" rx="2"/><line x1="6" y1="19" x2="12" y2="19"/></svg>
+        </div>
+        <h3>Cross-Platform Delivery</h3>
+        <p>Native, banner, video, rewarded, and CTV formats unified across every channel and screen size.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon mission-icon-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a0033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+        </div>
+        <h3>Global Campaign Reach</h3>
+        <p>Live in 150+ markets with localized creative, language coverage, and region-specific bidding strategy.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon mission-icon-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a0033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M7 12a5 5 0 0 1 10 0"/><circle cx="12" cy="12" r="1.5" fill="#1a0033"/></svg>
+        </div>
+        <h3>Worldwide Traffic &amp; Media</h3>
+        <p>150+ premium traffic sources and 900+ advertisers, powered by our self-owned ADX, SSP, and DSP stack.</p>
+      </div>
+    </div>
+    <div class="mission-stats">
+      <div class="stat"><span class="num">8.2B+</span><span class="lbl">Users reached</span></div>
+      <div class="stat"><span class="num">150+</span><span class="lbl">Traffic sources</span></div>
+      <div class="stat"><span class="num">900+</span><span class="lbl">Advertisers</span></div>
+      <div class="stat"><span class="num">6B</span><span class="lbl">Daily ad requests</span></div>
+      <div class="stat"><span class="num">&lt; 100ms</span><span class="lbl">RTB response</span></div>
+    </div>
+  </section>
+  <section id="ai-plus-ad" class="aiad-section">
+    <div class="aiad-inner">
+      <div class="aiad-eyebrow"><span class="pulse"></span>AI · ALGORITHM · AD TECH</div>
+      <h2 class="aiad-title"><span class="ai-grad">AI+AD</span> — Over a decade of algorithmic intelligence</h2>
+      <p class="aiad-sub">BorderlessAd is not just an ad network — it is an <strong>AI advertising and media platform</strong> forged by dozens of top-tier AI scientists with more than ten years of continuous algorithmic research. Our one-stop platform delivers your ads to millions of households worldwide, driving user growth through neural audience modeling, reinforcement-learning bidding, generative creative production, and real-time anti-fraud — all powered by proprietary deep-learning algorithms running on a high-performance distributed engine.</p>
+      <div class="aiad-grid">
+        <div class="aiad-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#22e1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><line x1="7" y1="6" x2="10" y2="11"/><line x1="7" y1="18" x2="10" y2="13"/><line x1="14" y1="11" x2="17" y2="6"/><line x1="14" y1="13" x2="17" y2="18"/></svg></div>
+          <span class="tag">Deep Learning</span>
+          <h3>Neural Targeting Engine</h3>
+          <p>Multi-layer neural networks model 2,000+ user signals to predict intent and match the right audience in milliseconds.</p>
+        </div>
+        <div class="aiad-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#22e1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18"/><path d="M5 19V11"/><path d="M10 19V7"/><path d="M15 19V13"/><path d="M20 19V5"/><polyline points="3 9 8 4 13 8 20 3"/></svg></div>
+          <span class="tag">Reinforcement Learning</span>
+          <h3>Smart Bidding Algorithm</h3>
+          <p>Self-learning RL agent optimizes CPI / CPA / CPS / ROAS in real-time across millions of bid requests per second.</p>
+        </div>
+        <div class="aiad-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#22e1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2 8 12.7 4 8.8 9.5 8z"/></svg></div>
+          <span class="tag">Generative AI / AIGC</span>
+          <h3>AIGC Creative Studio</h3>
+          <p>Generative diffusion + LLM pipeline produces hundreds of localized video, image and copy variants automatically.</p>
+        </div>
+        <div class="aiad-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#22e1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><polyline points="15 7 21 7 21 13"/></svg></div>
+          <span class="tag">Predictive ML</span>
+          <h3>Predictive LTV &amp; pLTV</h3>
+          <p>Gradient-boosted models forecast day-7, day-30, day-180 user value to focus spend on high-LTV cohorts.</p>
+        </div>
+        <div class="aiad-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#22e1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <span class="tag">Computer Vision + Behavior AI</span>
+          <h3>Anti-Fraud AI Shield</h3>
+          <p>CV + behavioral graph models detect click-spam, install-farm and SDK-spoofing fraud with 99.7% accuracy.</p>
+        </div>
+        <div class="aiad-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#22e1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="7" cy="7.5" r=".7" fill="#22e1ff"/><circle cx="10" cy="7.5" r=".7" fill="#22e1ff"/><line x1="7" y1="14" x2="12" y2="14"/><line x1="7" y1="16.5" x2="10" y2="16.5"/></svg></div>
+          <span class="tag">Algorithmic DSP</span>
+          <h3>Self-Learning Recommendation</h3>
+          <p>Two-tower retrieval + cross-attention ranking serves the most engaging ad creative to every individual user.</p>
+        </div>
+      </div>
+      <div class="aiad-tech">
+        <span class="lbl">Tech Stack</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">PyTorch</span>
+        <span class="chip">LLM / Diffusion</span>
+        <span class="chip">Spark</span>
+        <span class="chip">Flink</span>
+        <span class="chip">Kafka</span>
+        <span class="chip">ClickHouse</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">GPU Cluster</span>
+        <span class="chip">Edge Compute</span>
+      </div>
+      <div class="aiad-heritage">
+        <div class="heritage-item">
+          <span class="heritage-num">10+</span>
+          <span class="heritage-lbl">Years of AI &amp;<br/>Algorithm R&amp;D</span>
+        </div>
+        <div class="heritage-item">
+          <span class="heritage-num">50+</span>
+          <span class="heritage-lbl">Top-Tier AI<br/>Scientists</span>
+        </div>
+        <div class="heritage-item">
+          <span class="heritage-num">2000+</span>
+          <span class="heritage-lbl">User Signals in<br/>Neural Models</span>
+        </div>
+        <div class="heritage-item">
+          <span class="heritage-num">&lt;50ms</span>
+          <span class="heritage-lbl">AI Inference<br/>Latency</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="platforms" class="platforms-section">
+    <div class="platforms-heading">
+      <div class="platforms-eyebrow">Our Product Suite</div>
+      <h2 class="platforms-title">One ecosystem. <span class="accent">Three powerful platforms.</span></h2>
+      <p class="platforms-sub">From ad delivery to traffic aggregation and campaign operations — BorderlessAd runs a fully integrated ad-tech stack powered by AI.</p>
+    </div>
+    <div class="platforms-grid">
+      <div class="platform-card">
+        <div class="plat-icon plat-dsp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <span class="plat-label">AI Ad Delivery Platform</span>
+        <h3>One-Stop AI Ad Delivery &amp; Marketing Platform</h3>
+        <p>An AI-first DSP where advertisers launch, manage, and optimize CPI / CPA / CPS campaigns across iOS, Android, and CTV. Neural targeting, RL-based bidding, and generative creative work together to maximize marketing ROI.</p>
+        <ul class="plat-features">
+          <li>Neural audience modeling &amp; AI lookalike expansion</li>
+          <li>Reinforcement-learning bidding engine</li>
+          <li>AI marketing creative generation (AIGC)</li>
+          <li>Cross-channel AI campaign orchestration</li>
+          <li>Instant MMP postback &amp; attribution sync</li>
+        </ul>
+      </div>
+      <div class="platform-card">
+        <div class="plat-icon plat-adx">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <span class="plat-label">Ad Exchange</span>
+        <h3>Global Traffic Aggregation Platform</h3>
+        <p>Our self-owned ADX aggregates premium inventory from 150+ worldwide traffic sources, connecting publishers and developers with global demand through real-time auction.</p>
+        <ul class="plat-features">
+          <li>150+ integrated traffic sources worldwide</li>
+          <li>RTB auction with &lt;100ms response time</li>
+          <li>Brand-safety filtering &amp; fraud pre-scan</li>
+          <li>Unified SDK &amp; API for publishers</li>
+          <li>Dynamic floor pricing &amp; yield optimization</li>
+        </ul>
+      </div>
+      <div class="platform-card">
+        <div class="plat-icon plat-ops">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a0033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <span class="plat-label">Operations Center</span>
+        <h3>Smart Ad Operations Platform</h3>
+        <p>A command center for campaign managers, media buyers, and account teams to monitor performance, detect anomalies, and scale winning strategies with AI-assisted recommendations.</p>
+        <ul class="plat-features">
+          <li>Real-time dashboard &amp; performance alerts</li>
+          <li>AI-assisted budget allocation &amp; pacing</li>
+          <li>Automated anomaly &amp; fraud detection</li>
+          <li>Cross-team workflow &amp; permission control</li>
+          <li>One-click reporting &amp; data export</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="strengths" class="strengths-section">
+    <div class="strengths-heading">
+      <div class="strengths-eyebrow">Why BorderlessAd</div>
+      <h2 class="strengths-title">Built for scale. <span class="accent">Trusted for results.</span></h2>
+      <p class="strengths-sub">Three pillars that define our edge in the global mobile advertising landscape.</p>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-card str-efficiency">
+        <span class="str-num">&lt;100ms</span>
+        <span class="str-label">Delivery Efficiency</span>
+        <h3>Lightning-Fast Execution</h3>
+        <p>From campaign setup to live traffic in minutes. Our RTB engine responds in under 100ms, while real-time AI optimization continuously improves CTR, CVR, and ROAS without manual intervention.</p>
+      </div>
+      <div class="strength-card str-data">
+        <span class="str-num">99.7%</span>
+        <span class="str-label">Data Quality</span>
+        <h3>Precision You Can Trust</h3>
+        <p>AI-powered anti-fraud detection, automated MMP attribution sync, and granular event tracking ensure every data point is clean, attributable, and actionable. We block invalid traffic at the source.</p>
+      </div>
+      <div class="strength-card str-coverage">
+        <span class="str-num">150+</span>
+        <span class="str-label">Global Media Coverage</span>
+        <h3>Owned Media, Worldwide Reach</h3>
+        <p>Our self-owned ADX, SSP, and DSP connect 150+ premium traffic sources across every continent. Direct publisher relationships and API-integrated affiliate networks deliver borderless scale with local precision.</p>
+      </div>
+    </div>
+  </section>
+  <section id="ecosystem" class="heading-section magrintop">
+    <h2 class="heading2">our advertising ecosystem</h2>
+  </section>
+  <section class="cards-section smallmargintop">
+    <div class="ecosystem-grid">
+      <div class="ecosystem-card">
+        <img src="images/illus-global-app-ads.svg" loading="lazy" alt="Borderless global mobile app advertising" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">Borderless global reach</h3>
+          <p class="main-paragraph">Cross-region user acquisition for mobile apps on iOS and Android, powered by 8.2B+ user outreach across 150+ traffic sources.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-dsp-adx-flow.svg" loading="lazy" alt="DSP SSP ADX programmatic flow" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">DSP · SSP · ADX programmatic stack</h3>
+          <p class="main-paragraph">Self-owned ADX, SSP and DSP systems with sub-100ms RTB auctions, integrated with global developer affiliate platforms via API.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-appsflyer-attribution.svg" loading="lazy" alt="AppsFlyer Adjust Branch Kochava MMP attribution chain" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">MMP attribution — AppsFlyer &amp; more</h3>
+          <p class="main-paragraph">Native integration with AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker and Impact for end-to-end ROAS and LTV tracking.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-mobile-creative.svg" loading="lazy" alt="AI-powered mobile ad creative variants" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">AI creative — fully managed</h3>
+          <p class="main-paragraph">From creative production to campaign rollout, our AI scans thousands of creatives daily to deliver regionalized, market-driven variants.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mmp-strip">
+    <div class="mmp-eyebrow">Automated Attribution Integrations</div>
+    <div class="mmp-flex">
+      <div class="mmp-badge"><span class="dot"></span>AppsFlyer</div>
+      <div class="mmp-badge"><span class="dot"></span>Adjust</div>
+      <div class="mmp-badge"><span class="dot"></span>Branch</div>
+      <div class="mmp-badge"><span class="dot"></span>Kochava</div>
+      <div class="mmp-badge"><span class="dot"></span>Singular</div>
+    </div>
+    <div class="mmp-note">Native API integration for real-time attribution, CTA / VTA postback, event sync, and fraud-signal filtering.</div>
+  </section>
   <section class="halfbanner innerpadding margintop">
     <div class="imagehalf">
       <h2 data-w-id="666406b4-7753-f60b-4f2e-3ce9ce94fbb6" style="opacity:0" class="heading2 centeralign">Boost ROI and eliminate wasted spend</h2>
@@ -822,14 +2252,14 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
     </div>
   </section>
   <section class="heading-section magrintop">
-    <h2 data-w-id="6fe3d1e6-942d-d8ba-7a7e-d3aa6d132d18" style="opacity:0" class="heading2">make your ads visible</h2>
+    <h2 data-w-id="6fe3d1e6-942d-d8ba-7a7e-d3aa6d132d18" style="opacity:0" class="heading2">Make Your Ads Visible</h2>
   </section>
   <section class="cards-section smallmargintop">
     <div class="w-layout-hflex cardsflex">
       <div class="w-layout-vflex keycard _50flex">
         <div class="w-layout-hflex iconheading"><img src="images/frame-202131330241.svg" loading="lazy" width="28"
             alt="" class="iconcard" />
-          <h3 class="heading3">Set up your goal with us</h3>
+          <h3 class="heading3">Set Up Your Goals With Us</h3>
         </div>
         <p class="main-paragraph">Together with advertisers we define <br />goals, target audience, and budget of
           the campaign.</p>
@@ -867,12 +2297,10 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
     </div>
   </section>
   <section class="bannersection innerpadding margintop additionalmobilepadding greenbg">
-    <h2 data-w-id="2ce6dbef-a3c7-1219-a92e-1c1dd017512b" style="opacity:0" class="heading2 centeralign maxwidth">real
-      results with no fluff</h2>
+    <h2 data-w-id="2ce6dbef-a3c7-1219-a92e-1c1dd017512b" style="opacity:0" class="heading2 centeralign maxwidth">Real Results With No Fluff</h2>
   </section>
   <section class="heading-section magrintop">
-    <h2 data-w-id="67119ae0-6e49-c449-5fb5-70ba00f91bea" style="opacity:0" class="heading2 sizefix">BorderlessAd is where the
-      mobile advertising revolution is already happening</h2>
+    <h2 data-w-id="67119ae0-6e49-c449-5fb5-70ba00f91bea" style="opacity:0" class="heading2 sizefix">Where the Mobile Advertising Revolution Is Happening</h2>
   </section>
   <section class="cards-section smallmargintop">
     <div class="w-layout-hflex cardsflex">
@@ -883,7 +2311,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
           <div class="texttag">User Activity Boost</div>
         </div>
         <div class="w-layout-vflex textflex">
-          <h3 class="heading2 black">user acquisition</h3>
+          <h3 class="heading2 black">User Acquisition</h3>
           <p class="main-paragraph black">Leverage advanced targeting and machine-learning insights to deliver users who
             not only install but stay active, helping you build a loyal customer base.</p>
         </div>
@@ -897,7 +2325,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
         </div>
         <div class="w-layout-vflex textflex">
           <h3 class="heading2 black">Support for All Major MMPs</h3>
-          <p class="main-paragraph black">BorderlessAd integrates with all leading Mobile Measurement Partners (MMPs) — including Appsflyer, Adjust, Kochava, Branch, Appmetrica, MyTracker, and Impact — to ensure precise tracking, attribution, and analytics.</p>
+          <p class="main-paragraph black">BorderlessAd integrates with all leading Mobile Measurement Partners (MMPs) — including AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker, and Impact — to ensure precise tracking, <strong>CTA / VTA attribution</strong>, and analytics.</p>
         </div>
       </div>
       <div class="w-layout-vflex textcard _50flex green">
@@ -908,7 +2336,7 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
         </div>
         <div class="w-layout-vflex textflex">
           <h3 class="heading2">Retargeting</h3>
-          <p class="main-paragraph">BorderlessAd integrates with all leading Mobile Measurement Partners (MMPs) — including Appsflyer, Adjust, Kochava, Branch, Appmetrica, MyTracker, and Impact — to ensure precise tracking, attribution, and analytics.</p>
+          <p class="main-paragraph">BorderlessAd integrates with all leading Mobile Measurement Partners (MMPs) — including AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker, and Impact — to ensure precise tracking, <strong>CTA / VTA attribution</strong>, and analytics.</p>
         </div>
       </div>
       <div class="w-layout-vflex textcard _50flex violet">
@@ -1126,49 +2554,84 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
       </div>
     </section>
   </div>
-  <section class="footersection magrintop">
-    <div class="w-layout-hflex footerinfo">
+  <section class="footersection">
+    <div class="site-footer">
 
-<div style="max-width:1000px; margin:0 auto; padding:2rem 1.5rem;">
-
-    <!-- 简洁专业标题 -->
-    <div style="border-bottom:1px solid #dce4ec; padding-bottom:1rem; margin-bottom:1.8rem;">
-        <h1 style="font-size:1.8rem; font-weight:600; margin:0 0 0.25rem; color:#0a293b;">Privacy Policy</h1>
-        <div style="font-size:0.8rem; color:#4a627a;">Last updated: May 28, 2026</div>
-    </div>
-
-    <!-- 核心条款精简版，专业且完整 -->
-    <div style="background:#fff; border-radius:16px; padding:1.5rem; border:1px solid #e9eff3; margin-bottom:1.8rem;">
-        <p><strong>BorderlessAd</strong> (“we”, “us”, “our”) respects your privacy. This policy describes how we handle your personal data.</p>
-
-        <h3 style="font-size:1.1rem; margin:1rem 0 0.3rem;">Information we collect</h3>
-        <p>Name, email, company, usage data (IP, device, cookies), and communications sent to us.</p>
-
-        <h3 style="font-size:1.1rem; margin:1rem 0 0.3rem;">How we use data</h3>
-        <p>Provide services, respond to inquiries, improve security, and comply with legal obligations. <strong>We do not sell your data</strong>.</p>
-
-        <h3 style="font-size:1.1rem; margin:1rem 0 0.3rem;">Your rights</h3>
-        <p>Access, correct, delete, or restrict processing. Contact us to exercise rights.</p>
-
-        <h3 style="font-size:1.1rem; margin:1rem 0 0.3rem;">Data security & retention</h3>
-        <p>We retain data only as long as necessary and apply industry-standard protections.</p>
-
-        <p style="margin-top:1rem; font-size:0.9rem;">For full details or privacy requests, email us at <a href="mailto:felix@borderlessad.com" style="color:#2c7da0;">felix@borderlessad.com</a>.</p>
-    </div>
-
-    <!-- 您指定的页脚结构（保留原class，样式内联增强专业感） -->
-    <div class="w-layout-vflex footerlinks" style="display:flex; flex-direction:column; align-items:flex-start; gap:0.6rem; border-top:1px solid #dce4ec; padding-top:1.2rem;">
-        <a href="privacy-policy-2.html" class="footerlinkitem w-inline-block" style="text-decoration:none;">
-            <p style="margin:0; font-weight:500; color:#2c7da0;">Privacy Policy</p>
-        </a>
-        <div class="main-paragraph" style="font-size:0.8rem; color:#5b6e8c; margin:0;">© 2026 BorderlessAd. All rights reserved.</div>
-        <div class="main-paragraph" style="font-size:0.8rem; color:#5b6e8c; margin:0;">
-            Contact: <a href="mailto:felix@borderlessad.com" style="color:#2c7da0; text-decoration:none;">felix@borderlessad.com</a>
+      <div class="footer-grid">
+        <!-- Brand block -->
+        <div class="footer-brand">
+          <img src="images/logo-borderlessad.svg" loading="lazy" alt="BorderlessAd" class="footer-logo" />
+          <p>The AI-powered advertising and media platform helping brands grow globally across mobile, web, and connected TV.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="X / Twitter">X</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="mailto:felix@borderlessad.com" aria-label="Email">@</a>
+          </div>
         </div>
-        <div class="legal-note" style="font-size:0.7rem; color:#7e8c9e; margin-top:0.3rem;">Unauthorized use or reproduction prohibited.</div>
-    </div>
-</div>
 
+        <!-- Platform -->
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#aiad">AI Advertising</a></li>
+            <li><a href="#strengths">DSP &amp; SSP</a></li>
+            <li><a href="#mmp">MMP Integrations</a></li>
+            <li><a href="BorderlessAd-ai-prototype.html">AI Suite</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#mission">User Acquisition</a></li>
+            <li><a href="#mission">Retargeting</a></li>
+            <li><a href="#mission">Brand Awareness</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:felix@borderlessad.com">Careers</a></li>
+            <li><a href="mailto:press@borderlessad.com">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy-2.html">Privacy Policy</a></li>
+            <li><a href="privacy-policy-2.html#terms">Terms of Service</a></li>
+            <li><a href="privacy-policy-2.html#cookies">Cookie Policy</a></li>
+            <li><a href="privacy-policy-2.html#dpa">DPA</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 BorderlessAd, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy-2.html">Privacy</a>
+          <a href="privacy-policy-2.html#terms">Terms</a>
+          <a href="privacy-policy-2.html#cookies">Cookies</a>
+          <a href="privacy-policy-2.html#do-not-sell">Do Not Sell or Share My Info</a>
+        </div>
+        <div class="footer-compliance" aria-label="Compliance">
+          <span class="compliance-badge">GDPR</span>
+          <span class="compliance-badge">CCPA</span>
+          <span class="compliance-badge">IAB TCF v2.2</span>
+        </div>
+      </div>
+
+    </div>
   </section>
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/webflow-script.js" type="text/javascript"></script>
