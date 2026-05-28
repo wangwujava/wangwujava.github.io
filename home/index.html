@@ -728,7 +728,75 @@
       50%{ transform: scale(1.3); opacity: .6; }
     }
     @media (max-width: 900px){
-      .topnav{ display: none; }
+      .topnav{
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(19,6,59,.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        z-index: 10000;
+        padding: 40px 24px;
+      }
+      .topnav.mobile-open{ display: flex !important; }
+      .topnav a{
+        font-size: 22px;
+        padding: 16px 24px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+      }
+      .topnav a:last-child{ border-bottom: none; }
+      .topnav a.nav-ai{ margin-top: 16px; width: auto; display: inline-flex; }
+      /* hamburger toggle */
+      .mobile-hamburger{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px; height: 42px;
+        border-radius: 10px;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.12);
+        cursor: pointer;
+        z-index: 10001;
+        padding: 0;
+        margin-left: auto;
+      }
+      .mobile-hamburger span,
+      .mobile-hamburger span::before,
+      .mobile-hamburger span::after{
+        display: block; width: 20px; height: 2px;
+        background: rgba(255,245,230,.85); border-radius: 2px;
+        transition: all .3s ease;
+        position: absolute;
+      }
+      .mobile-hamburger span{ position: relative; }
+      .mobile-hamburger span::before{ content: ''; top: -6px; }
+      .mobile-hamburger span::after{ content: ''; top: 6px; }
+      .mobile-hamburger.is-active span{ background: transparent; }
+      .mobile-hamburger.is-active span::before{ top: 0; transform: rotate(45deg); }
+      .mobile-hamburger.is-active span::after{ top: 0; transform: rotate(-45deg); }
+      .mobile-close{
+        position: absolute; top: 18px; right: 18px;
+        width: 36px; height: 36px;
+        display: flex; align-items: center; justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.12);
+        cursor: pointer;
+        transition: background .2s ease;
+      }
+      .mobile-close:hover{ background: rgba(255,255,255,.15); }
+      /* hide desktop-only elements on mobile */
+      .headernav.w-container .menu-button{ display: none !important; }
+      .navbar.mobile.w-nav{ display: none !important; }
+    }
+    @media (min-width: 901px){
+      .mobile-hamburger{ display: none !important; }
     }
 
     /* ===== AI+AD section ===== */
@@ -1819,6 +1887,68 @@
       padding: 40px;
       backdrop-filter: blur(10px);
     }
+    .contact-details{
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .contact-detail-item{
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contact-detail-item .cd-icon{
+      flex: 0 0 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(255,217,122,.08);
+      border: 1px solid rgba(255,217,122,.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-detail-item .cd-icon svg{ width: 18px; height: 18px; stroke: #ffd97a; fill: none; }
+    .contact-detail-item .cd-text h4{
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(255,245,230,.6);
+      margin: 0 0 4px;
+    }
+    .contact-detail-item .cd-text p{
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,245,230,.88);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .contact-detail-item .cd-text a{
+      color: var(--gold);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .contact-detail-item .cd-text a:hover{ color: #fff; }
+    .contact-trust-badges{
+      margin-top: 28px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .contact-trust-badges .ctb{
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,245,230,.65);
+      letter-spacing: .04em;
+    }
 
     /* ---- Industry-standard ad-tech footer ---- */
     .footersection{
@@ -2234,11 +2364,12 @@
         <div class="menu-button w-nav-button">
           <div class="w-icon-nav-menu"></div>
         </div>
-        <nav class="topnav">
+        <nav class="topnav" id="mainTopnav">
           <a href="index.html">Home</a>
           <a href="case-studies.html">Case Studies</a>
-          <a href="#contact">Contact</a>
+          <div class="mobile-close" onclick="document.getElementById('mainTopnav').classList.remove('mobile-open');document.querySelector('.mobile-hamburger').classList.remove('is-active');"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="rgba(255,245,230,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
         </nav>
+        <button class="mobile-hamburger" onclick="var n=document.getElementById('mainTopnav');n.classList.toggle('mobile-open');this.classList.toggle('is-active');"><span></span></button>
       </div>
     </div>
     <div class="w-layout-hflex rightbtns">
@@ -2546,41 +2677,6 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
       <div class="stat"><span class="num">&lt; 100ms</span><span class="lbl">RTB response</span></div>
     </div>
   </section>
-  <section id="ecosystem" class="heading-section magrintop">
-    <h2 class="heading2">our advertising ecosystem</h2>
-  </section>
-  <section class="cards-section smallmargintop">
-    <div class="ecosystem-grid">
-      <div class="ecosystem-card">
-        <img src="images/illus-global-app-ads.svg" loading="lazy" alt="Borderless global mobile app advertising" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">Borderless global reach</h3>
-          <p class="main-paragraph">Cross-region user acquisition for mobile apps on iOS and Android, powered by 8.2B+ user outreach across 150+ traffic sources.</p>
-        </div>
-      </div>
-      <div class="ecosystem-card">
-        <img src="images/illus-dsp-adx-flow.svg" loading="lazy" alt="DSP SSP ADX programmatic flow" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">DSP · SSP · ADX programmatic stack</h3>
-          <p class="main-paragraph">Self-owned ADX, SSP and DSP systems with sub-100ms RTB auctions, integrated with global developer affiliate platforms via API.</p>
-        </div>
-      </div>
-      <div class="ecosystem-card">
-        <img src="images/illus-appsflyer-attribution.svg" loading="lazy" alt="AppsFlyer Adjust Branch Kochava MMP attribution chain" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">MMP attribution — AppsFlyer &amp; more</h3>
-          <p class="main-paragraph">Native integration with AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker and Impact for end-to-end ROAS and LTV tracking.</p>
-        </div>
-      </div>
-      <div class="ecosystem-card">
-        <img src="images/illus-mobile-creative.svg" loading="lazy" alt="AI-powered mobile ad creative variants" class="ecosystem-card-img" />
-        <div class="ecosystem-card-text">
-          <h3 class="heading3">AI creative — fully managed</h3>
-          <p class="main-paragraph">From creative production to campaign rollout, our AI scans thousands of creatives daily to deliver regionalized, market-driven variants.</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <section id="ai-plus-ad" class="aiad-section">
     <div class="aiad-inner">
       <div class="aiad-eyebrow"><span class="pulse"></span>AI · ALGORITHM · AD TECH</div>
@@ -2653,6 +2749,41 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
         <div class="heritage-item">
           <span class="heritage-num">&lt;50ms</span>
           <span class="heritage-lbl">AI Inference<br/>Latency</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="ecosystem" class="heading-section magrintop">
+    <h2 class="heading2">our advertising ecosystem</h2>
+  </section>
+  <section class="cards-section smallmargintop">
+    <div class="ecosystem-grid">
+      <div class="ecosystem-card">
+        <img src="images/illus-global-app-ads.svg" loading="lazy" alt="Borderless global mobile app advertising" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">Borderless global reach</h3>
+          <p class="main-paragraph">Cross-region user acquisition for mobile apps on iOS and Android, powered by 8.2B+ user outreach across 150+ traffic sources.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-dsp-adx-flow.svg" loading="lazy" alt="DSP SSP ADX programmatic flow" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">DSP · SSP · ADX programmatic stack</h3>
+          <p class="main-paragraph">Self-owned ADX, SSP and DSP systems with sub-100ms RTB auctions, integrated with global developer affiliate platforms via API.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-appsflyer-attribution.svg" loading="lazy" alt="AppsFlyer Adjust Branch Kochava MMP attribution chain" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">MMP attribution — AppsFlyer &amp; more</h3>
+          <p class="main-paragraph">Native integration with AppsFlyer, Adjust, Kochava, Branch, Singular, Appmetrica, MyTracker and Impact for end-to-end ROAS and LTV tracking.</p>
+        </div>
+      </div>
+      <div class="ecosystem-card">
+        <img src="images/illus-mobile-creative.svg" loading="lazy" alt="AI-powered mobile ad creative variants" class="ecosystem-card-img" />
+        <div class="ecosystem-card-text">
+          <h3 class="heading3">AI creative — fully managed</h3>
+          <p class="main-paragraph">From creative production to campaign rollout, our AI scans thousands of creatives daily to deliver regionalized, market-driven variants.</p>
         </div>
       </div>
     </div>
@@ -3000,10 +3131,46 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
       </div>
     </div>
     <div class="imageequalhalf">
-      <h2 data-w-id="fceffc98-1047-3539-e7dd-0d5b580bd784" style="opacity:0" class="heading2 centeralign">Let’s join forces
+      <h2 data-w-id="fceffc98-1047-3539-e7dd-0d5b580bd784" style="opacity:0" class="heading2 centeralign">Let's join forces
       </h2>
       <p data-w-id="7296223e-e5c3-3c12-6bff-8debb7350531" style="opacity:0" class="main-paragraph center">Contact us
-        using the form and we’ll get back to you right away</p>
+        using the form and we'll get back to you right away</p>
+      <div class="contact-details">
+        <div class="contact-detail-item">
+          <div class="cd-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="cd-text">
+            <h4>Email</h4>
+            <p><a href="mailto:felix@borderlessad.com">felix@borderlessad.com</a></p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="cd-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="cd-text">
+            <h4>Response Time</h4>
+            <p>Within 24 hours on business days</p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="cd-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="cd-text">
+            <h4>Headquarters</h4>
+            <p>Hong Kong &middot; Global operations in 68+ countries</p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="cd-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div class="cd-text">
+            <h4>Business Hours</h4>
+            <p>Mon–Fri, 9:00–18:00 HKT (GMT+8)</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-trust-badges">
+        <span class="ctb">GDPR Compliant</span>
+        <span class="ctb">SOC 2 Type II</span>
+        <span class="ctb">IAB Certified</span>
+        <span class="ctb">ISO 27001</span>
+      </div>
     </div>
   </section>
   <div id="popup" class="popupwrap">
@@ -3058,7 +3225,7 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
         <!-- Brand block -->
         <div class="footer-brand">
           <img src="frame-202131330264.png" loading="lazy" alt="Borderless AI Limited" class="footer-logo" />
-          <p>The AI-powered advertising and media platform helping brands grow globally across mobile, web, and connected TV.</p>
+          <p>The AI-powered advertising and media platform helping brands grow globally across mobile (Android, iOS) and TV.</p>
           <div class="footer-social" aria-label="Social media">
             <a href="javascript:void(0)" onclick="return false;" aria-label="LinkedIn">in</a>
             <a href="javascript:void(0)" onclick="return false;" aria-label="X / Twitter">X</a>
