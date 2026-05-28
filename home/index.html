@@ -363,16 +363,17 @@
       -webkit-text-fill-color: #ffffff;
       font-weight: 600;
     }
-    /* ---- Hero badges row (single line) ---- */
+    /* ---- Hero badges row (always single line) ---- */
     .hero-badges-row{
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap !important;
       align-items: center;
       justify-content: flex-start;
-      column-gap: 12px;
-      row-gap: 2px;
+      column-gap: 10px;
+      row-gap: 0;
       width: 100%;
       margin: 0 0 14px;
+      overflow: hidden;
     }
     /* ---- Hero AI badge ---- */
     .hero-ai-badge{
@@ -420,8 +421,12 @@
     }
     .hero-scientist-badge svg{ stroke: rgba(245,242,250,.65) !important; }
     @media (max-width: 760px){
-      .hero-badges-row{ column-gap: 8px; row-gap: 2px; }
-      .hero-ai-badge, .hero-scientist-badge{ font-size: 10px; padding: 5px 12px; letter-spacing: .15em; white-space: normal; }
+      .hero-badges-row{ column-gap: 6px; flex-wrap: nowrap !important; }
+      .hero-ai-badge, .hero-scientist-badge{ font-size: 9px; padding: 4px 9px; letter-spacing: .12em; white-space: nowrap; }
+      .hero-scientist-badge svg{ display: none; }
+    }
+    @media (max-width: 480px){
+      .hero-ai-badge, .hero-scientist-badge{ font-size: 8px; padding: 3px 7px; letter-spacing: .08em; }
     }
     @media (max-width: 600px){
       .hero-subtitle{ font-size: 15px !important; padding: 0 16px; }
@@ -1273,10 +1278,17 @@
       padding-right: 24px !important;
     }
     .headernav.w-container > .topnav{ flex: 0 0 auto; }
+    /* rightbtns hosts Contact Us + Language flush right */
+    .rightbtns{
+      display: flex !important;
+      align-items: center;
+      gap: 14px;
+      margin-left: auto !important;
+    }
+    .rightbtns .lang-dropdown{ order: 99; }
     .lang-dropdown{
       position: relative;
       display: inline-block;
-      margin-left: auto !important;
     }
     .lang-trigger{
       display: inline-flex;
@@ -1501,8 +1513,8 @@
       color: transparent !important;
       font-family: 'Anton','Oswald',sans-serif !important;
       font-weight: 900 !important;
-      font-size: clamp(64px, 11.5vw, 180px) !important;
-      letter-spacing: -.03em !important;
+      font-size: clamp(40px, 6.4vw, 96px) !important;
+      letter-spacing: -.025em !important;
       filter: drop-shadow(0 2px 12px rgba(180,200,255,.10));
       animation: none;
       margin-top: 18px;
@@ -2121,12 +2133,12 @@
     /* Responsive headline */
     @media (max-width: 991px){
       .main-paragraph.center.leftdesktop{ font-size: 44px !important; }
-      .text-span-2{ font-size: 108px !important; }
+      .text-span-2{ font-size: 76px !important; }
       .bannersection.greenbg, .mybannersection{ margin-left: 12px; margin-right: 12px; border-radius: 24px; }
     }
     @media (max-width: 600px){
       .main-paragraph.center.leftdesktop{ font-size: 34px !important; }
-      .text-span-2{ font-size: 78px !important; }
+      .text-span-2{ font-size: 56px !important; }
       .numbercard .heading2{ font-size: 44px !important; }
       .logo-block{ padding: 28px 18px !important; }
     }
@@ -2174,7 +2186,7 @@
     @media (max-width: 480px){
       .heroscreen{ padding-top: 12px !important; }
       .main-paragraph.center.leftdesktop{ font-size: 28px !important; }
-      .text-span-2{ font-size: 60px !important; }
+      .text-span-2{ font-size: 44px !important; }
       .hero-subtitle{ font-size: 14px !important; }
       .mission-title{ font-size: 32px !important; }
       .platforms-title{ font-size: 30px !important; }
@@ -2224,24 +2236,6 @@
           <a href="case-studies.html">Case Studies</a>
           <a href="#contact">Contact</a>
         </nav>
-        <div class="lang-dropdown" id="langDropdown">
-          <div class="lang-trigger" onclick="document.getElementById('langDropdown').classList.toggle('open');event.stopPropagation();">
-            <span class="lang-current">English</span>
-            <span class="lang-caret"></span>
-          </div>
-          <div class="lang-panel" onclick="event.stopPropagation();">
-            <div class="lang-option is-active" data-lang="en">English</div>
-            <div class="lang-option" data-lang="es">Español</div>
-            <div class="lang-option" data-lang="fr">Français</div>
-            <div class="lang-option" data-lang="de">Deutsch</div>
-            <div class="lang-option" data-lang="ja">日本語</div>
-            <div class="lang-option" data-lang="ko">한국어</div>
-            <div class="lang-option" data-lang="pt">Português</div>
-            <div class="lang-option" data-lang="ru">Русский</div>
-            <div class="lang-option" data-lang="ar">العربية</div>
-            <div class="lang-option" data-lang="it">Italiano</div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="w-layout-hflex rightbtns">
@@ -2253,6 +2247,25 @@
         <a data-w-id="d8348b62-9688-1fc5-307c-4b75655f5d7e" href="#contact" class="btntext headmob w-inline-block">
           <div class="headerbtn">Contact Us</div>
         </a>
+      </div>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-trigger" onclick="document.getElementById('langDropdown').classList.toggle('open');event.stopPropagation();">
+          <span class="lang-current">English</span>
+          <span class="lang-caret"></span>
+        </div>
+        <div class="lang-panel" onclick="event.stopPropagation();">
+          <div class="lang-option is-active" data-lang="en">English</div>
+          <div class="lang-option" data-lang="zh">中文</div>
+          <div class="lang-option" data-lang="es">Español</div>
+          <div class="lang-option" data-lang="fr">Français</div>
+          <div class="lang-option" data-lang="de">Deutsch</div>
+          <div class="lang-option" data-lang="ja">日本語</div>
+          <div class="lang-option" data-lang="ko">한국어</div>
+          <div class="lang-option" data-lang="pt">Português</div>
+          <div class="lang-option" data-lang="ru">Русский</div>
+          <div class="lang-option" data-lang="ar">العربية</div>
+          <div class="lang-option" data-lang="it">Italiano</div>
+        </div>
       </div>
       <div data-animation="over-left" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
         data-doc-height="1" role="banner" class="navbar mobile w-nav">
@@ -2273,7 +2286,7 @@
     </div>
   </section>
   <section class="heroscreen innerpadding margintop">
-    <div class="w-layout-vflex herotext">
+    <div class="w-layout-vflex">
       <div class="hero-badges-row">
         <div class="hero-ai-badge"><span class="ai-pulse"></span>AI + AD · Intelligent Advertising &amp; Media</div>
         <div class="hero-scientist-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M12 2a7 7 0 0 1 7 7c0 2.5-1.5 4.5-3 6l-1 5H9l-1-5c-1.5-1.5-3-3.5-3-6a7 7 0 0 1 7-7z"/><line x1="9" y1="19" x2="15" y2="19"/></svg> Powered by dozens of top-tier AI scientists</div>
