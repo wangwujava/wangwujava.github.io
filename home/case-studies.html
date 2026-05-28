@@ -164,6 +164,73 @@
       color: rgba(255,245,230,.7); text-transform: uppercase;
     }
 
+    /* Industry Impact Dashboard */
+    .impact-dashboard{
+      max-width: 1280px; margin: 80px auto 0; padding: 0 24px;
+    }
+    .impact-header{ text-align: center; max-width: 760px; margin: 0 auto 36px; }
+    .impact-eyebrow{
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      background: rgba(255,224,138,.08); border: 1px solid rgba(255,224,138,.22);
+      color: var(--gold); font-size: 11px; font-weight: 700;
+      letter-spacing: .25em; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .impact-header h2{
+      font-family: 'Anton','Oswald',sans-serif; font-size: 42px; line-height: 1.1;
+      color: #fff; margin: 0 0 12px; letter-spacing: -.01em;
+    }
+    .impact-header p{
+      font-size: 15px; line-height: 1.65; color: rgba(255,245,230,.72); margin: 0;
+    }
+    .impact-grid{
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .impact-card{
+      position: relative; padding: 26px 22px 22px;
+      border-radius: 22px;
+      background: linear-gradient(165deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+      border: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 14px 40px rgba(15,10,30,.30);
+      transition: transform .3s ease, border-color .3s ease;
+    }
+    .impact-card:hover{ transform: translateY(-4px); border-color: rgba(255,217,122,.30); }
+    .impact-icon{
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, rgba(255,217,122,.18), rgba(232,176,106,.10));
+      border: 1px solid rgba(255,217,122,.25);
+    }
+    .impact-icon svg{ width: 22px; height: 22px; color: var(--gold); }
+    .impact-title{
+      font-size: 11px; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: rgba(255,245,230,.72); margin-bottom: 8px;
+    }
+    .impact-headline{
+      font-family: 'Anton','Oswald',sans-serif; font-size: 44px; line-height: 1;
+      background: var(--grad-accent);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; margin-bottom: 6px;
+    }
+    .impact-sub{
+      font-size: 13px; line-height: 1.5; color: rgba(255,245,230,.65);
+      margin: 0 0 16px;
+    }
+    .impact-mini{ display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px dashed rgba(255,255,255,.08); }
+    .mini-row{ display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+    .mini-row .mini-k{ color: rgba(255,245,230,.62); font-weight: 500; }
+    .mini-row .mini-v{ color: #fff; font-weight: 700; font-feature-settings: "tnum"; }
+    .mini-row .mini-v.up{ color: #6be3a4; }
+    .mini-row .mini-v.down{ color: #ff9966; }
+
+    @media (max-width: 1100px){ .impact-grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px){ .impact-grid{ grid-template-columns: 1fr; } .impact-header h2{ font-size: 30px; } }
+
+    /* Extended metrics row inside cs-info */
+    .cs-metrics.cs-metrics-6{ grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 600px){ .cs-metrics.cs-metrics-6{ grid-template-columns: repeat(2, 1fr); } }
+
     /* Case Study Cards */
     .cs-section{ max-width: 1280px; margin: 80px auto 0; padding: 0 24px; }
     .cs-grid{ display: grid; grid-template-columns: 1fr; gap: 40px; }
@@ -397,8 +464,85 @@
     <div class="agg-stat"><span class="num">4.2B+</span><span class="lbl">Total Impressions Delivered</span></div>
     <div class="agg-stat"><span class="num">87M+</span><span class="lbl">App Installs Generated</span></div>
     <div class="agg-stat"><span class="num">$1.8B+</span><span class="lbl">Revenue Driven</span></div>
-    <div class="agg-stat"><span class="num">340%</span><span class="lbl">Avg ROI Uplift</span></div>
+    <div class="agg-stat"><span class="num">340%</span><span class="lbl">Avg ROAS Uplift</span></div>
     <div class="agg-stat"><span class="num">68</span><span class="lbl">Countries Reached</span></div>
+    <div class="agg-stat"><span class="num">4.2x</span><span class="lbl">Avg LTV / CAC Ratio</span></div>
+    <div class="agg-stat"><span class="num">−42%</span><span class="lbl">Avg CPA Reduction</span></div>
+  </section>
+
+  <section class="impact-dashboard">
+    <div class="impact-header">
+      <div class="impact-eyebrow">Performance Pillars</div>
+      <h2>Measurable Lifts Across the Full Funnel</h2>
+      <p>Every BorderlessAd campaign is benchmarked against four core advertising-industry pillars — from spend efficiency to user lifetime value — so partners see exactly where AI is moving the needle.</p>
+    </div>
+    <div class="impact-grid">
+
+      <!-- Pillar 1: ROI / ROAS -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
+        </div>
+        <div class="impact-title">Return on Ad Spend</div>
+        <div class="impact-headline">+340%</div>
+        <p class="impact-sub">Average ROAS uplift across e-commerce, fintech and entertainment verticals after 90 days of AI bidding optimization.</p>
+        <div class="impact-mini">
+          <div class="mini-row"><span class="mini-k">Avg ROAS</span><span class="mini-v">5.2x</span></div>
+          <div class="mini-row"><span class="mini-k">Payback Period</span><span class="mini-v down">−47%</span></div>
+          <div class="mini-row"><span class="mini-k">Wasted Spend</span><span class="mini-v down">−37%</span></div>
+          <div class="mini-row"><span class="mini-k">Profit Margin</span><span class="mini-v up">+58%</span></div>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Customer Acquisition -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6"/><path d="M19 8v6"/></svg>
+        </div>
+        <div class="impact-title">Customer Acquisition</div>
+        <div class="impact-headline">−42%</div>
+        <p class="impact-sub">Reduction in average CPA / CPI driven by behavioral graph models, lookalike expansion and predictive LTV bidding.</p>
+        <div class="impact-mini">
+          <div class="mini-row"><span class="mini-k">Avg CPI</span><span class="mini-v">$0.71</span></div>
+          <div class="mini-row"><span class="mini-k">CVR Lift</span><span class="mini-v up">+128%</span></div>
+          <div class="mini-row"><span class="mini-k">Fraud Filter Acc.</span><span class="mini-v">99.7%</span></div>
+          <div class="mini-row"><span class="mini-k">Quality User Share</span><span class="mini-v up">+71%</span></div>
+        </div>
+      </div>
+
+      <!-- Pillar 3: App Monetization -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M15 9.5C15 8 13.5 7 12 7s-3 1-3 2.5 1.5 2 3 2.5 3 1 3 2.5-1.5 2.5-3 2.5-3-1-3-2.5"/></svg>
+        </div>
+        <div class="impact-title">App Monetization</div>
+        <div class="impact-headline">+85%</div>
+        <p class="impact-sub">Lift in user LTV through deep-funnel optimization, RL-based eCPM bidding and high-intent cohort prioritization.</p>
+        <div class="impact-mini">
+          <div class="mini-row"><span class="mini-k">ARPU</span><span class="mini-v up">+56%</span></div>
+          <div class="mini-row"><span class="mini-k">eCPM</span><span class="mini-v up">+73%</span></div>
+          <div class="mini-row"><span class="mini-k">D7 Retention</span><span class="mini-v">44%</span></div>
+          <div class="mini-row"><span class="mini-k">Repeat Purchase</span><span class="mini-v up">+62%</span></div>
+        </div>
+      </div>
+
+      <!-- Pillar 4: Audience Reach -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+        </div>
+        <div class="impact-title">Audience Reach</div>
+        <div class="impact-headline">3.2x</div>
+        <p class="impact-sub">Expansion of qualified addressable audience through 150+ traffic sources, AIGC localization and cross-platform CTV/Mobile graph.</p>
+        <div class="impact-mini">
+          <div class="mini-row"><span class="mini-k">Markets Activated</span><span class="mini-v">68 → 132</span></div>
+          <div class="mini-row"><span class="mini-k">Unique Reach</span><span class="mini-v up">+218%</span></div>
+          <div class="mini-row"><span class="mini-k">Frequency Cap Eff.</span><span class="mini-v up">+44%</span></div>
+          <div class="mini-row"><span class="mini-k">CTV + Mobile Mix</span><span class="mini-v">38 / 62</span></div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section class="cs-section">
@@ -433,11 +577,13 @@
           <span class="cs-obj">CPA / FTD Campaign</span>
           <h3>High-Value Trader Acquisition in Emerging Markets</h3>
           <p>Working in a high-compliance vertical, BorderlessAd's anti-fraud AI shield filtered invalid traffic with 99.7% accuracy. Behavioral graph models identified users with genuine trading intent, driving first-time deposit rates far above benchmark.</p>
-          <div class="cs-metrics">
+          <div class="cs-metrics cs-metrics-6">
             <div class="cs-metric"><span class="m-val">520M</span><span class="m-label">Impressions</span></div>
             <div class="cs-metric"><span class="m-val">9M</span><span class="m-label">Registrations</span></div>
             <div class="cs-metric"><span class="m-val">$9.2</span><span class="m-label">Avg CPA</span></div>
             <div class="cs-metric"><span class="m-val">8.4%</span><span class="m-label">FTD Rate</span></div>
+            <div class="cs-metric"><span class="m-val">4.2x</span><span class="m-label">LTV / CAC</span></div>
+            <div class="cs-metric"><span class="m-val">+180%</span><span class="m-label">ARPU Uplift</span></div>
           </div>
         </div>
       </div>
@@ -471,11 +617,13 @@
           <span class="cs-obj">User Acquisition & Retargeting</span>
           <h3>Scaling Fashion Commerce Across Southeast Asia and Europe</h3>
           <p>BorderlessAd deployed neural targeting and generative creative to identify high-intent fashion shoppers. AI-driven lookalike expansion uncovered new audiences in 12 markets, while RL-based bidding optimized CPA downward week over week.</p>
-          <div class="cs-metrics">
+          <div class="cs-metrics cs-metrics-6">
             <div class="cs-metric"><span class="m-val">1.2B</span><span class="m-label">Impressions</span></div>
             <div class="cs-metric"><span class="m-val">28M</span><span class="m-label">Installs</span></div>
             <div class="cs-metric"><span class="m-val">$0.84</span><span class="m-label">Avg CPI</span></div>
             <div class="cs-metric"><span class="m-val">520%</span><span class="m-label">ROAS</span></div>
+            <div class="cs-metric"><span class="m-val">+215%</span><span class="m-label">GMV Uplift</span></div>
+            <div class="cs-metric"><span class="m-val">3.4x</span><span class="m-label">Audience Reach</span></div>
           </div>
         </div>
       </div>
@@ -509,11 +657,13 @@
           <span class="cs-obj">CPI / CPS Campaign</span>
           <h3>Driving Marketplace Transactions in LatAm and Southeast Asia</h3>
           <p>Leveraging BorderlessAd's cross-platform DSP and 150+ traffic sources, Shopee achieved massive scale during peak shopping seasons. Predictive LTV models prioritized high-value buyer cohorts, cutting wasted spend by 37%.</p>
-          <div class="cs-metrics">
+          <div class="cs-metrics cs-metrics-6">
             <div class="cs-metric"><span class="m-val">980M</span><span class="m-label">Impressions</span></div>
             <div class="cs-metric"><span class="m-val">19M</span><span class="m-label">Installs</span></div>
             <div class="cs-metric"><span class="m-val">$0.71</span><span class="m-label">Avg CPI</span></div>
             <div class="cs-metric"><span class="m-val">480%</span><span class="m-label">ROAS</span></div>
+            <div class="cs-metric"><span class="m-val">+73%</span><span class="m-label">eCPM Uplift</span></div>
+            <div class="cs-metric"><span class="m-val">38%</span><span class="m-label">Repeat Buyer</span></div>
           </div>
         </div>
       </div>
@@ -547,11 +697,13 @@
           <span class="cs-obj">Global User Growth</span>
           <h3>Viral-Scale User Acquisition Across 40+ Markets</h3>
           <p>BorderlessAd's AIGC creative engine generated thousands of localized video variants tailored to regional trends. The two-tower recommendation system matched creatives to user intent, delivering industry-leading D7 retention and organic uplift.</p>
-          <div class="cs-metrics">
+          <div class="cs-metrics cs-metrics-6">
             <div class="cs-metric"><span class="m-val">1.5B</span><span class="m-label">Impressions</span></div>
             <div class="cs-metric"><span class="m-val">31M</span><span class="m-label">Installs</span></div>
             <div class="cs-metric"><span class="m-val">$0.62</span><span class="m-label">Avg CPI</span></div>
             <div class="cs-metric"><span class="m-val">44%</span><span class="m-label">D7 Retention</span></div>
+            <div class="cs-metric"><span class="m-val">12→47</span><span class="m-label">Markets Activated</span></div>
+            <div class="cs-metric"><span class="m-val">+42%</span><span class="m-label">DAU Growth</span></div>
           </div>
         </div>
       </div>
