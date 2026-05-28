@@ -296,21 +296,27 @@
 
     /* ---- Hero subtitle (mission tagline) ---- */
     .hero-subtitle{
-      max-width: 100%;
+      width: 100%;
+      max-width: 220px;
+      min-width: 0;
       margin: 0 !important;
       padding-left: 0;
+      padding-right: 0;
       text-align: left;
       font-family: 'Inter', sans-serif;
-      font-size: 13px !important;
-      line-height: 1.6 !important;
+      font-size: 12px !important;
+      line-height: 1.55 !important;
       font-weight: 500;
-      color: rgba(245,242,250,.72) !important;
+      color: rgba(245,242,250,.7) !important;
+      justify-self: end;
+      align-self: center;
     }
     .hero-headline-row{
       display: grid;
-      grid-template-columns: minmax(0, 1.65fr) minmax(0, 0.35fr);
-      gap: 48px;
+      grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+      gap: 28px;
       align-items: center;
+      justify-content: space-between;
       width: 100%;
       margin: 8px 0 0;
     }
@@ -351,7 +357,7 @@
       }
       .hero-headline-left{ align-items: center; text-align: center; }
       .hero-h1{ text-align: center !important; font-size: 30px !important; white-space: normal; }
-      .hero-subtitle{ text-align: center; font-size: 15px !important; padding: 0 8px; }
+      .hero-subtitle{ text-align: center; font-size: 15px !important; padding: 0 8px; max-width: 100%; justify-self: center; }
       .text-span-2{ text-align: center; white-space: normal; font-size: clamp(56px, 14vw, 104px) !important; }
     }
     .hero-subtitle .accent{
@@ -403,6 +409,86 @@
     .hero-scientist-badge svg{ stroke: rgba(245,242,250,.65) !important; }
     @media (max-width: 600px){
       .hero-subtitle{ font-size: 15px !important; padding: 0 16px; }
+    }
+
+    /* ---- Brands That Rely On Us — overseas app cards ---- */
+    .brand-apps-grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .brand-app-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 28px 18px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.045) 0%, rgba(255,255,255,.018) 100%);
+      border: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.06);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .brand-app-card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,.18);
+      box-shadow: 0 18px 44px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.10);
+    }
+    .brand-app-icon{
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.18);
+    }
+    .brand-app-icon svg{ width: 32px; height: 32px; }
+    .brand-icon-letter{
+      font-family: 'Anton','Oswald',sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1;
+    }
+    /* Brand color variants */
+    .brand-icon-duolingo{ background: linear-gradient(135deg, #7ee43a 0%, #58cc02 100%); }
+    .brand-icon-temu{ background: linear-gradient(135deg, #ff7a3d 0%, #e64a0a 100%); }
+    .brand-icon-tiktok{ background: linear-gradient(135deg, #25f4ee 0%, #fe2c55 100%); }
+    .brand-icon-capcut{ background: linear-gradient(135deg, #1a1a2e 0%, #6c63ff 100%); }
+    .brand-app-name{
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: rgba(245,242,250,.95);
+    }
+    .brand-app-tag{
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(245,242,250,.55);
+      text-align: center;
+    }
+    @media (max-width: 900px){
+      .brand-apps-grid{ grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    }
+    @media (max-width: 480px){
+      .brand-apps-grid{ gap: 14px; padding: 0 16px; }
+      .brand-app-card{ padding: 22px 14px; }
+      .brand-app-icon{ width: 56px; height: 56px; border-radius: 16px; }
+      .brand-app-icon svg{ width: 28px; height: 28px; }
+      .brand-icon-letter{ font-size: 28px; }
+      .brand-app-name{ font-size: 16px; }
+      .brand-app-tag{ font-size: 11px; }
     }
 
     /* ---- Mission pillars ---- */
@@ -2306,20 +2392,35 @@ BorderlessAd is a global <strong>AI advertising and media technology company</st
     <h2 data-w-id="cd1d41db-1cc7-34cd-1e25-5c5ab52635eb" style="opacity:0" class="heading2">Brands that rely on us</h2>
   </section>
   <section class="logo-section smallmargintop">
-    <div class="w-layout-hflex logoflex">
-      <!-- <img src="images/frame-202131329989.svg" loading="lazy" width="160" alt="Bybit Logo" class="square-logo" /> -->
-      <!-- <img src="images/frame-202131329987.svg" loading="lazy" width="160" alt="BingX Logo" class="square-logo" /> -->
-      <!-- <img src="images/frame-202131329988.png" loading="lazy" width="160" alt="" class="square-logo" /> -->
-      <!-- <img src="images/frame-202131329990.svg" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" /> -->
-      <img src="images/frame-202131329983.svg" loading="lazy" width="160" alt="McDonalds Logo" class="square-logo" />
-      <img src="images/frame-202131329984.svg" loading="lazy" width="160" alt="TikTok Logo" class="square-logo" />
-      <img src="images/frame-202131329986.svg" style="display: none" loading="lazy" width="160" alt="XM Logo" class="square-logo" />
-      <img src="images/frame-202131329985.svg" loading="lazy" width="160" alt="BritishAirways Logo"
-        class="square-logo" />
-      <img src="images/frame-2131329993.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
-      <img src="images/frame-2131329992.svg" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
-      <img src="images/frame-2131329994.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
-      <img src="images/frame-2131329995.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
+    <div class="brand-apps-grid">
+      <div class="brand-app-card">
+        <div class="brand-app-icon brand-icon-duolingo">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c-3.3 0-6 2.5-6 5.7 0 1.6.7 3 1.7 4l-1.2 3.6c-.2.5.3 1 .8.8L11 16h1c3.3 0 6-2.5 6-5.7S15.3 3 12 3zm-2.5 6.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+        </div>
+        <div class="brand-app-name">Duolingo</div>
+        <div class="brand-app-tag">Language Learning Platform</div>
+      </div>
+      <div class="brand-app-card">
+        <div class="brand-app-icon brand-icon-temu">
+          <span class="brand-icon-letter">T</span>
+        </div>
+        <div class="brand-app-name">Temu</div>
+        <div class="brand-app-tag">Cross-Border Marketplace</div>
+      </div>
+      <div class="brand-app-card">
+        <div class="brand-app-icon brand-icon-tiktok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6v10a3 3 0 1 1-3-3"/><path d="M9 6c0 3 2 5 6 5"/><path d="M15 3v8"/></svg>
+        </div>
+        <div class="brand-app-name">TikTok</div>
+        <div class="brand-app-tag">Short-Video Social Network</div>
+      </div>
+      <div class="brand-app-card">
+        <div class="brand-app-icon brand-icon-capcut">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="8" y1="7" x2="20" y2="19"/><line x1="8" y1="17" x2="20" y2="5"/></svg>
+        </div>
+        <div class="brand-app-name">CapCut</div>
+        <div class="brand-app-tag">AI Video Creation Suite</div>
+      </div>
     </div>
   </section>
   <section id="mission" class="mission-section">
