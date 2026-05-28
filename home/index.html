@@ -268,6 +268,53 @@
     .dsp-card-3{ background: linear-gradient(135deg, #22e1ff 0%, #7b2cff 100%); }
     .dsp-card-4{ background: linear-gradient(135deg, #ffd166 0%, #ff5ec4 100%); color:#1a0033; }
     .dsp-card-4 .dsp-tag{ color: rgba(26,0,51,.75); }
+    .dsp-card-5{ background: linear-gradient(135deg, #00d4a4 0%, #22e1ff 100%); }
+    .dsp-card-6{ background: linear-gradient(135deg, #7b2cff 0%, #ff2d92 100%); }
+
+    /* Hero variant: smaller cards inline under the headline */
+    .hero-dsp-wrap{
+      width: 100%;
+      max-width: 1180px;
+      margin: 36px auto 0;
+      padding: 0 24px;
+    }
+    .hero-dsp-title{
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .35em;
+      color: rgba(255,245,230,.7);
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .hero-dsp-flex{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .hero-dsp-flex .dsp-partner-card{
+      flex: 0 1 170px;
+      min-width: 150px;
+      max-width: 200px;
+      padding: 18px 14px;
+      font-size: 22px;
+      border-radius: 18px;
+    }
+    .hero-dsp-flex .dsp-partner-card .dsp-tag{
+      font-size: 10px;
+      letter-spacing: .2em;
+      margin-top: 6px;
+    }
+    @media (max-width: 600px){
+      .hero-dsp-flex .dsp-partner-card{
+        flex: 1 1 130px;
+        font-size: 18px;
+        padding: 14px 10px;
+      }
+      .hero-dsp-title{ font-size: 11px; letter-spacing: .25em; }
+    }
     .main-paragraph{ color: rgba(255,245,230,.92) !important; }
     .main-paragraph.center.leftdesktop{
       font-size: 64px !important;
@@ -604,6 +651,35 @@
       <h1 class="main-paragraph center leftdesktop">Scale your mobile growth with<br /><span
           class="text-span-2" style="font-size:160px;" >BorderlessAd</span></h1>
     </div>
+    <div class="hero-dsp-wrap">
+      <div class="hero-dsp-title">Trusted DSP Partners</div>
+      <div class="hero-dsp-flex">
+        <div class="dsp-partner-card dsp-card-1">
+          <span class="dsp-name">Unity</span>
+          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-2">
+          <span class="dsp-name">Liftoff</span>
+          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-3">
+          <span class="dsp-name">Verve</span>
+          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-4">
+          <span class="dsp-name">Mintegral</span>
+          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-5">
+          <span class="dsp-name">Liftofflowctr</span>
+          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+        <div class="dsp-partner-card dsp-card-6">
+          <span class="dsp-name">Bizzclick</span>
+          <span class="dsp-tag">DSP PARTNER</span>
+        </div>
+      </div>
+    </div>
     <div class="w-layout-vflex herobtn">
     
     </div>
@@ -724,29 +800,6 @@ BorderlessAd is a leading mobile advertising technology company focused on user 
       <img src="images/frame-2131329992.svg" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
       <img src="images/frame-2131329994.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
       <img src="images/frame-2131329995.svg" style="display: none" loading="lazy" width="160" alt="1xBet Logo" class="square-logo" />
-    </div>
-  </section>
-  <section class="heading-section magrintop">
-    <h2 class="heading2">our DSP partners</h2>
-  </section>
-  <section class="cards-section smallmargintop">
-    <div class="dsp-partners-flex">
-      <div class="dsp-partner-card dsp-card-1">
-        <span class="dsp-name">Unity</span>
-        <span class="dsp-tag">DSP PARTNER</span>
-      </div>
-      <div class="dsp-partner-card dsp-card-2">
-        <span class="dsp-name">Liftoff</span>
-        <span class="dsp-tag">DSP PARTNER</span>
-      </div>
-      <div class="dsp-partner-card dsp-card-3">
-        <span class="dsp-name">Verve</span>
-        <span class="dsp-tag">DSP PARTNER</span>
-      </div>
-      <div class="dsp-partner-card dsp-card-4">
-        <span class="dsp-name">Mintegral</span>
-        <span class="dsp-tag">DSP PARTNER</span>
-      </div>
     </div>
   </section>
   <section class="halfbanner innerpadding margintop">
